@@ -1,5 +1,5 @@
 import Hero from "../components/Hero";
-import Stats from "./Stats";
+import Stats from "./Stats.tsx";
 import WhyAustralia from "./WhyAustralia";
 import IndustryPillars from "./IndustryPillars";
 import Membership from "./Membership";
