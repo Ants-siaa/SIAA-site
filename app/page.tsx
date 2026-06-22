@@ -1,9 +1,10 @@
 import Hero from "../components/Hero";
-import Stats from "./Stats";
-import WhyAustralia from "./WhyAustralia";
-import IndustryPillars from "./IndustryPillars";
-import Membership from "./Membership";
-import Footer from "./Footer";
+import Stats from "../components/Stats";
+import WhyAustralia from "../components/WhyAustralia";
+import IndustryPillars from "../components/IndustryPillars";
+import Membership from "../components/Membership";
+import Footer from "../components/Footer";
+import Hero from "../components/Hero";
 
 export default function Home() {
   return (
