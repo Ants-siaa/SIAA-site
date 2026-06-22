@@ -4,7 +4,6 @@ import WhyAustralia from "../components/WhyAustralia";
 import IndustryPillars from "../components/IndustryPillars";
 import Membership from "../components/Membership";
 import Footer from "../components/Footer";
-import Hero from "../components/Hero";
 
 export default function Home() {
   return (
