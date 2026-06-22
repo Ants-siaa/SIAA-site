@@ -36,7 +36,10 @@ export default function Hero() {
               </button>
             
             </div>
-            Connecting Industry, Academia, Government and Investors
+            <p className="mt-8 text-xl text-slate-600 max-w-2xl">
+              Connecting Industry, Academia, Government and Investors.
+            </p>
+            
           </div>
 
           <div>
