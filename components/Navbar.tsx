@@ -1,33 +1,64 @@
+"use client";
+
+import Link from "next/link";
+
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
-
+    <header className="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-6">
+        <div className="flex items-center justify-between h-20">
 
-        <div className="h-20 flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-3">
+            <div>
+              <div className="font-bold text-xl text-slate-900">
+                SIAA
+              </div>
+              <div className="text-xs text-slate-500">
+                Semiconductor Industry Association of Australia
+              </div>
+            </div>
+          </Link>
 
-          <div className="text-2xl font-bold text-slate-900">
-            SIAA
-          </div>
+          {/* Navigation */}
+          <nav className="hidden md:flex items-center gap-8">
+            <Link href="/" className="text-slate-700 hover:text-slate-900 transition">
+              Home
+            </Link>
 
-          <nav className="hidden md:flex gap-8 text-slate-700">
+            <Link href="/about" className="text-slate-700 hover:text-slate-900 transition">
+              About
+            </Link>
 
-            <a href="#">About</a>
-            <a href="#">Industry</a>
-            <a href="#">Membership</a>
-            <a href="#">Events</a>
-            <a href="#">News</a>
+            <Link href="/membership" className="text-slate-700 hover:text-slate-900 transition">
+              Membership
+            </Link>
 
+            <Link href="/industry" className="text-slate-700 hover:text-slate-900 transition">
+              Industry
+            </Link>
+
+            <Link href="/news" className="text-slate-700 hover:text-slate-900 transition">
+              News & Insights
+            </Link>
+
+            <Link href="/events" className="text-slate-700 hover:text-slate-900 transition">
+              Events
+            </Link>
+
+            <Link href="/contact" className="text-slate-700 hover:text-slate-900 transition">
+              Contact
+            </Link>
+
+            <Link
+              href="/join"
+              className="bg-slate-900 text-white px-5 py-2.5 rounded-md hover:bg-slate-800 transition"
+            >
+              Join SIAA
+            </Link>
           </nav>
-
-          <button className="rounded-full bg-blue-700 px-6 py-3 text-white">
-            Join Now
-          </button>
-
         </div>
-
       </div>
-
     </header>
   );
 }
