@@ -34,7 +34,7 @@ export default function Hero() {
               <button className="rounded-full border border-slate-300 px-8 py-4 text-slate-800">
                 Explore Industry
               </button>
-
+            Connecting Industry, Academia, Government and Investors
             </div>
 
           </div>
