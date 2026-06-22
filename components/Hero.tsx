@@ -32,7 +32,7 @@ export default function Hero() {
               </button>
 
               <button className="rounded-full border border-slate-300 px-8 py-4 text-slate-800">
-                Explore Industry
+                Discover Opportunities
               </button>
 
             </div>
