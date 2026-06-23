@@ -42,53 +42,95 @@ export default function Navbar() {
   </button>
 
   {industryOpen && (
-    <div className="absolute top-full left-0 mt-2 w-72 bg-white border border-slate-200 rounded-lg shadow-lg py-2">
+  <div className="absolute top-full left-0 mt-3 w-96 bg-white rounded-xl shadow-xl border border-slate-200 overflow-hidden">
+
+    <div className="bg-slate-900 text-white px-6 py-4">
+      <h3 className="font-semibold">
+        Australia's Semiconductor Ecosystem
+      </h3>
+      <p className="text-sm text-slate-300 mt-1">
+        Explore key sectors of the industry.
+      </p>
+    </div>
+
+    <div className="py-2">
 
       <Link
         href="/semiconductor-manufacturing-australia"
-        className="block px-4 py-3 hover:bg-slate-50"
+        className="block px-6 py-4 hover:bg-slate-50"
       >
-        Semiconductor Manufacturing
+        <div className="font-medium">
+          Semiconductor Manufacturing
+        </div>
+        <div className="text-sm text-slate-500">
+          Fabrication, packaging and advanced manufacturing.
+        </div>
       </Link>
 
       <Link
         href="/australian-chip-design"
-        className="block px-4 py-3 hover:bg-slate-50"
+        className="block px-6 py-4 hover:bg-slate-50"
       >
-        Chip Design
+        <div className="font-medium">
+          Chip Design
+        </div>
+        <div className="text-sm text-slate-500">
+          IC design, EDA and emerging technologies.
+        </div>
       </Link>
 
       <Link
         href="/compound-semiconductors-australia"
-        className="block px-4 py-3 hover:bg-slate-50"
+        className="block px-6 py-4 hover:bg-slate-50"
       >
-        Compound Semiconductors
+        <div className="font-medium">
+          Compound Semiconductors
+        </div>
+        <div className="text-sm text-slate-500">
+          GaN, SiC and next-generation materials.
+        </div>
       </Link>
 
       <Link
         href="/photonics-australia"
-        className="block px-4 py-3 hover:bg-slate-50"
+        className="block px-6 py-4 hover:bg-slate-50"
       >
-        Photonics
+        <div className="font-medium">
+          Photonics
+        </div>
+        <div className="text-sm text-slate-500">
+          Optical technologies and integrated photonics.
+        </div>
       </Link>
 
       <Link
         href="/semiconductor-supply-chain"
-        className="block px-4 py-3 hover:bg-slate-50"
+        className="block px-6 py-4 hover:bg-slate-50"
       >
-        Supply Chain
+        <div className="font-medium">
+          Supply Chain
+        </div>
+        <div className="text-sm text-slate-500">
+          Equipment, materials and supporting industries.
+        </div>
       </Link>
 
       <Link
         href="/workforce"
-        className="block px-4 py-3 hover:bg-slate-50"
+        className="block px-6 py-4 hover:bg-slate-50"
       >
-        Workforce Development
+        <div className="font-medium">
+          Workforce Development
+        </div>
+        <div className="text-sm text-slate-500">
+          Building Australia's semiconductor talent pipeline.
+        </div>
       </Link>
 
     </div>
-  )}
-</div>
+
+  </div>
+)}
             <Link href="/membership">Membership</Link>
             <Link href="/news">News</Link>
             <Link href="/events">Events</Link>
