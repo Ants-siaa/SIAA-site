@@ -129,9 +129,11 @@ export default function Navbar() {
 
     </div>
 
-  </div>
+    </div>
 )}
-            <Link href="/membership">Membership</Link>
+</div>
+
+<Link href="/membership">Membership</Link>
             <Link href="/news">News</Link>
             <Link href="/events">Events</Link>
             <Link href="/contact">Contact</Link>
