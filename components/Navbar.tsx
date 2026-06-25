@@ -32,7 +32,7 @@ export default function Navbar() {
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>
             <div
-  className="relative"
+  className="relative py-4 -my-4"
   onMouseEnter={() => setIndustryOpen(true)}
   onMouseLeave={() => setIndustryOpen(false)}
 >
