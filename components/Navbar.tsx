@@ -42,7 +42,7 @@ export default function Navbar() {
   </button>
 
   {industryOpen && (
-  <div className="absolute top-full left-0 mt-3 w-96 bg-white rounded-xl shadow-xl border border-slate-200 overflow-hidden">
+  <div className="absolute top-full left-0 w-96 bg-white rounded-xl shadow-xl border border-slate-200 overflow-hidden">
 
     <div className="bg-slate-900 text-white px-6 py-4">
       <h3 className="font-semibold">
