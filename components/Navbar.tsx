@@ -1,11 +1,13 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [industryOpen, setIndustryOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-slate-200">
@@ -29,8 +31,26 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <nav className="hidden lg:flex items-center gap-8">
 
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
+            <Link
+  href="/home"
+  className={
+    pathname === "/home"
+      ? "text-blue-600 font-semibold"
+      : ""
+  }
+>
+  Home
+</Link>
+            <Link
+  href="/about"
+  className={
+    pathname === "/about"
+      ? "text-blue-600 font-semibold"
+      : ""
+  }
+>
+  About
+</Link>
             <div
   className="relative py-4 -my-4"
   onMouseEnter={() => setIndustryOpen(true)}
@@ -133,10 +153,46 @@ export default function Navbar() {
 )}
 </div>
 
-<Link href="/membership">Membership</Link>
-            <Link href="/news">News</Link>
-            <Link href="/events">Events</Link>
-            <Link href="/contact">Contact</Link>
+<Link
+  href="/membership"
+  className={
+    pathname === "/membership"
+      ? "text-blue-600 font-semibold"
+      : ""
+  }
+>
+  Membership
+</Link>
+            <Link
+  href="/news"
+  className={
+    pathname === "/news"
+      ? "text-blue-600 font-semibold"
+      : ""
+  }
+>
+  News
+</Link>
+            <Link
+  href="/events"
+  className={
+    pathname === "/events"
+      ? "text-blue-600 font-semibold"
+      : ""
+  }
+>
+  Events
+</Link>
+            <Link
+  href="/contact"
+  className={
+    pathname === "/contact"
+      ? "text-blue-600 font-semibold"
+      : ""
+  }
+>
+  Contact
+</Link>
 
             <Link
               href="/join"
