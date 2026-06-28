@@ -131,7 +131,7 @@ export default function AboutPage() {
           <div className="rounded-xl overflow-hidden shadow-sm border">
             <div className="relative h-48">
               <Image
-                src="/images/parliment.jpg"
+                src="/images/parliament.jpg"
                 alt="Advocacy"
                 fill
                 className="object-cover"
@@ -173,7 +173,7 @@ export default function AboutPage() {
           <div className="rounded-xl overflow-hidden shadow-sm border">
             <div className="relative h-48">
               <Image
-                src="/images/Global-network.jpg"
+                src="/images/world network.jpg"
                 alt="Partnerships"
                 fill
                 className="object-cover"
