@@ -32,7 +32,7 @@ export default function Navbar() {
           <nav className="hidden lg:flex items-center gap-8">
 
             <Link
-  href="/home"
+  href="/"
   className={
     pathname === "/home"
       ? "text-blue-600 font-semibold"
