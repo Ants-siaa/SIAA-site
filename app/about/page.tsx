@@ -194,7 +194,7 @@ export default function AboutPage() {
           <div className="rounded-xl overflow-hidden shadow-sm border">
             <div className="relative h-48">
               <Image
-                src="/images/Australia-technology-skyline.jpg"
+                src="/images/australia-tech.jpg"
                 alt="Investment"
                 fill
                 className="object-cover"
