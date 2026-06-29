@@ -10,13 +10,11 @@ export default function Home() {
 
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <Image>
-    src="/images/Blue microchip with Australia map.png"
+            src="/images/Blue microchip with Australia map.png"
     alt="Semiconductor Industry Association of Australia"
     width={10}
     height={10}
-    priority
-              </Image>
+    priorit
               <div className="w-10 h-10 bg-blue-600 rounded-md" />
             <div>
               <p className="font-bold leading-tight">SIAA</p>
