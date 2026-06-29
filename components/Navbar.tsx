@@ -18,16 +18,27 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
 
           {/* Logo */}
-          <Link href="/">
-            <div>
-            <div className="font-bold text-2xl">
-                SIAA
-              </div>
-              <div className="text-xs text-slate-500">
-                Semiconductor Industry Association of Australia
-              </div>
-            </div>
-          </Link>
+          <Link href="/" className="flex items-center gap-3">
+
+  <Image
+    src="/images/siaa-chip-logo.png"
+    alt="SIAA"
+    width={52}
+    height={52}
+    priority
+  />
+
+  <div>
+    <div className="text-3xl font-bold text-slate-900 leading-none">
+      SIAA
+    </div>
+
+    <div className="text-sm text-slate-500 leading-tight">
+      Semiconductor Industry
+    </div>
+  </div>
+
+</Link>
 
           {/* Desktop Menu */}
           <nav className="hidden lg:flex items-center gap-8">
