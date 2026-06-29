@@ -21,7 +21,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3">
 
   <Image
-    src="/images/siaa-chip-logo.png"
+    src="/images/Blue microchip with Australia map.png"
     alt="SIAA"
     width={52}
     height={52}
