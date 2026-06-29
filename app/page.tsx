@@ -19,7 +19,7 @@ export default function Home() {
   priority
 />
             <div>
-              <p className="font-bold leading-tight">SIAA</p>
+              <p className="font-bold text-2xl">SIAA</p>
               <p className="text-xs text-slate-500">
                 Semiconductor Industry Association of Australia
               </p>
