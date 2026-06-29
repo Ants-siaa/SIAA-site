@@ -20,14 +20,6 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/">
             <div>
-            <div className="flex items-center gap-3">
-            <Image
-  src="/images/Blue microchip with Australia map.png"
-  alt="SIAA Logo"
-  width={60}
-  height={60}
-  priority
-/>
             <div className="font-bold text-2xl">
                 SIAA
               </div>
