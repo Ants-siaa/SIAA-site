@@ -20,8 +20,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/">
             <div>
-               {/* Logo */}
-          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3">
             <Image
   src="/images/Blue microchip with Australia map.png"
   alt="SIAA Logo"
