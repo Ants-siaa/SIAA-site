@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Search, Linkedin } from "lucide-react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -205,7 +206,24 @@ export default function Navbar() {
 >
   Contact
 </Link>
-        
+       <div className="flex items-center gap-5">
+
+  {/* Search */}
+  <button
+    className="text-slate-700 hover:text-blue-600 transition-colors"
+    aria-label="Search"
+  >
+    <Search size={20} />
+  </button>
+
+  {/* LinkedIn */}
+  <button
+    className="text-slate-700 hover:text-blue-600 transition-colors"
+    aria-label="LinkedIn"
+  >
+    <Linkedin size={20} />
+  </button>
+ 
             <Link
               href="/join"
               className="bg-slate-900 text-white px-5 py-2 rounded-md"
