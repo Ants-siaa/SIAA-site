@@ -4,11 +4,17 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import MegaMenu from "./MegaMenu";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [industryOpen, setIndustryOpen] = useState(false);
   const pathname = usePathname();
+
+  const navClass = (path: string) =>
+  pathname === path
+    ? "text-blue-600 font-semibold border-b-2 border-blue-600 pb-1 transition-colors"
+    : "text-slate-700 hover:text-blue-600 transition-colors";
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-slate-200">
@@ -54,14 +60,10 @@ export default function Navbar() {
   Home
 </Link>
             <Link
-  href="/about"
-  className={
-    pathname === "/about"
-      ? "text-blue-600 font-semibold"
-      : ""
-  }
+    href="/about"
+    className={navClass("/about")}
 >
-  About
+    About
 </Link>
             <div
   className="relative py-4 -my-4"
