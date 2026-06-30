@@ -51,7 +51,7 @@ export default function Navbar() {
 
             <Link
     href="/"
-    className={navClass("/about")}
+    className={navClass("/home")}
 >
     Home
 </Link>
