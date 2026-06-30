@@ -50,14 +50,10 @@ export default function Navbar() {
           <nav className="hidden lg:flex items-center gap-8">
 
             <Link
-  href="/"
-  className={
-    pathname === "/home"
-      ? "text-blue-600 font-semibold"
-      : ""
-  }
+    href="/"
+    className={navClass("/about")}
 >
-  Home
+    Home
 </Link>
             <Link
     href="/about"
