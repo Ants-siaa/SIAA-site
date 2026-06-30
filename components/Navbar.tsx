@@ -206,23 +206,7 @@ export default function Navbar() {
 >
   Contact
 </Link>
-       <div className="flex items-center gap-5">
 
-  {/* Search */}
-  <button
-    className="text-slate-700 hover:text-blue-600 transition-colors"
-    aria-label="Search"
-  >
-    <Search size={20} />
-  </button>
-
-  {/* LinkedIn */}
-  <button
-    className="text-slate-700 hover:text-blue-600 transition-colors"
-    aria-label="LinkedIn"
-  >
-    <Linkedin size={20} />
-  </button>
  
             <Link
               href="/join"
