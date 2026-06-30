@@ -205,11 +205,7 @@ export default function Navbar() {
 >
   Contact
 </Link>
-        {/* Actions */}
-          <div className="flex items-center gap-4">
-            <div className="w-9 h-9 rounded-full bg-slate-100" /> {/* search icon placeholder */}
-            <div className="w-9 h-9 rounded-md bg-blue-600/10" /> {/* linkedin placeholder */}
-
+        
             <Link
               href="/join"
               className="bg-slate-900 text-white px-5 py-2 rounded-md"
