@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Search, ChevronDown } from "lucide-react";
@@ -11,6 +11,7 @@ import MegaMenu from "./MegaMenu";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [industryOpen, setIndustryOpen] = useState(false);
+  const industryRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
 
@@ -19,7 +20,22 @@ export default function Navbar() {
   pathname === path
     ? "text-blue-600 font-semibold border-b-2 border-blue-600 pb-1 transition-colors"
     : "text-slate-700 hover:text-blue-600 transition-colors";
+useEffect(() => {
+  function handleClickOutside(event: MouseEvent) {
+    if (
+      industryRef.current &&
+      !industryRef.current.contains(event.target as Node)
+    ) {
+      setIndustryOpen(false);
+    }
+  }
 
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-slate-200">
 
@@ -71,7 +87,10 @@ export default function Navbar() {
   About
 </Link>
             
-           <div className="relative">
+           <div
+  ref={industryRef}
+  className="relative"
+>
 
     <button
   onClick={() => setIndustryOpen(!industryOpen)}
