@@ -18,7 +18,7 @@ import { Search, ChevronDown } from "lucide-react";
   setIndustryOpen(true);
 };
 
-  return (
+
     <header className="sticky top-0 z-50 bg-white border-b border-slate-200">
 
       <div className="max-w-7xl mx-auto px-6">
