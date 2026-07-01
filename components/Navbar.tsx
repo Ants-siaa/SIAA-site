@@ -127,11 +127,11 @@ export default function Navbar() {
 
 
             <Link
-              href="/join"
-              className="bg-slate-900 text-white px-5 py-2 rounded-md"
-            >
-              Join SIAA
-            </Link>
+            href="/join"
+            className="rounded-lg bg-[#0066FF] px-5 py-2.5 font-medium text-white shadow hover:bg-blue-700 transition"
+>
+    Join SIAA
+</Link>
 
           </nav>
 
