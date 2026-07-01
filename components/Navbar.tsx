@@ -169,35 +169,26 @@ export default function Navbar() {
 >
     Membership
 </Link>
-            <Link
-  href="/news"
-  className={
-    pathname === "/news"
-      ? "text-blue-600 font-semibold"
-      : ""
-  }
+
+ <Link
+    href="/news"
+    className={navClass("/news")}
 >
-  News
+    News
+</Link>           
+
+<Link
+    href="/events"
+    className={navClass("/events")}
+>
+    Events
 </Link>
-            <Link
-  href="/events"
-  className={
-    pathname === "/events"
-      ? "text-blue-600 font-semibold"
-      : ""
-  }
+
+<Link
+    href="/contact"
+    className={navClass("/contact")}
 >
-  Events
-</Link>
-            <Link
-  href="/contact"
-  className={
-    pathname === "/contact"
-      ? "text-blue-600 font-semibold"
-      : ""
-  }
->
-  Contact
+    Contact
 </Link>
 
  
