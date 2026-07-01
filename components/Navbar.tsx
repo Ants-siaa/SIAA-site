@@ -57,13 +57,14 @@ export default function Navbar() {
     Home
 </Link>
            <Link
-    href="/about"
-    className={navClass("/about")}
-     onClick={() => {
+  href="/about"
+  className={navClass("/about")}
+  onClick={() => {
     setIndustryOpen(false);
     setMenuOpen(false);
+  }}
 >
-    About
+  About
 </Link>
             
            <div className="relative">
