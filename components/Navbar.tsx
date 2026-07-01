@@ -62,29 +62,25 @@ export default function Navbar() {
 >
     About
 </Link>
-            <div
-  className="relative py-4 -my-4"
-onMouseEnter={() => setIndustryOpen(true)}
-onMouseLeave={() => setIndustryOpen(false)}
->
+            
+           <div className="relative">
 
     <button
-        className={`flex items-center gap-1 ${
-            pathname.startsWith("/industry")
-                ? "text-blue-600 font-semibold border-b-2 border-blue-600 pb-1"
-                : "text-slate-700 hover:text-blue-600 transition-colors"
-        }`}
-    >
-        Industry
-
-        <ChevronDown
-            size={16}
-            className={`transition-transform ${
-                industryOpen ? "rotate-180" : ""
-            }`}
-        />
-
-    </button>
+  onClick={() => setIndustryOpen(!industryOpen)}
+  className={`flex items-center gap-1 ${
+    pathname.startsWith("/industry")
+      ? "text-blue-600 font-semibold border-b-2 border-blue-600 pb-1"
+      : "text-slate-700 hover:text-blue-600 transition-colors"
+  }`}
+>
+  Industry
+  <ChevronDown
+    size={16}
+    className={`transition-transform ${
+      industryOpen ? "rotate-180" : ""
+    }`}
+  />
+</button>
 
     <MegaMenu open={industryOpen} />
 
