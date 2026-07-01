@@ -1,24 +1,18 @@
+Navbar
+
 "use client";
 
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import MegaMenu from "./MegaMenu";
-import { Search, ChevronDown } from "lucide-react";
 
-  const navClass = (path: string) =>
-  pathname === path
-    ? "text-blue-600 font-semibold border-b-2 border-blue-600 pb-1 transition-colors"
-    : "text-slate-700 hover:text-blue-600 transition-colors";
-  const openMenu = () => {
-  if (closeTimer.current) {
-    clearTimeout(closeTimer.current);
-  }
-  setIndustryOpen(true);
-};
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [industryOpen, setIndustryOpen] = useState(false);
+  const pathname = usePathname();
 
-
+  return (
     <header className="sticky top-0 z-50 bg-white border-b border-slate-200">
 
       <div className="max-w-7xl mx-auto px-6">
@@ -52,80 +46,169 @@ import { Search, ChevronDown } from "lucide-react";
           <nav className="hidden lg:flex items-center gap-8">
 
             <Link
-    href="/"
-    className={navClass("/home")}
+  href="/"
+  className={
+    pathname === "/home"
+      ? "text-blue-600 font-semibold"
+      : ""
+  }
 >
-    Home
+  Home
 </Link>
             <Link
-    href="/about"
-    className={navClass("/about")}
+  href="/about"
+  className={
+    pathname === "/about"
+      ? "text-blue-600 font-semibold"
+      : ""
+  }
 >
-    About
+  About
 </Link>
-
-<div
-    className="relative"
-    onMouseEnter={openMenu}
-    onMouseLeave={closeMenu}
+            <div
+  className="relative py-4 -my-4"
+  onMouseEnter={() => setIndustryOpen(true)}
+  onMouseLeave={() => setIndustryOpen(false)}
 >
+  <button className="flex items-center gap-1">
+    Industry
+    <span className="text-xs">▼</span>
+  </button>
 
-    <button
-        className={`flex items-center gap-1 ${
-            pathname.startsWith("/industry")
-                ? "text-blue-600 font-semibold border-b-2 border-blue-600 pb-1"
-                : "text-slate-700 hover:text-blue-600 transition-colors"
-        }`}
-    >
-        Industry
+  {industryOpen && (
+  <div className="absolute top-full left-0 w-96 bg-white rounded-xl shadow-xl border border-slate-200 overflow-hidden">
 
-        <ChevronDown
-            size={16}
-            className={`transition-transform ${
-                industryOpen ? "rotate-180" : ""
-            }`}
-        />
+    <div className="bg-slate-900 text-white px-6 py-4">
+      <h3 className="font-semibold">
+        Australia's Semiconductor Ecosystem
+      </h3>
+      <p className="text-sm text-slate-300 mt-1">
+        Explore key sectors of the industry.
+      </p>
+    </div>
 
-    </button>
+    <div className="py-2">
 
-    <MegaMenu open={industryOpen} />
+      <Link
+        href="/semiconductor-manufacturing-australia"
+        className="block px-6 py-4 hover:bg-slate-50"
+      >
+        <div className="font-medium">
+          Semiconductor Manufacturing
+        </div>
+        <div className="text-sm text-slate-500">
+          Fabrication, packaging and advanced manufacturing.
+        </div>
+      </Link>
 
+      <Link
+        href="/australian-chip-design"
+        className="block px-6 py-4 hover:bg-slate-50"
+      >
+        <div className="font-medium">
+          Chip Design
+        </div>
+        <div className="text-sm text-slate-500">
+          IC design, EDA and emerging technologies.
+        </div>
+      </Link>
+
+      <Link
+        href="/compound-semiconductors-australia"
+        className="block px-6 py-4 hover:bg-slate-50"
+      >
+        <div className="font-medium">
+          Compound Semiconductors
+        </div>
+        <div className="text-sm text-slate-500">
+          GaN, SiC and next-generation materials.
+        </div>
+      </Link>
+
+      <Link
+        href="/photonics-australia"
+        className="block px-6 py-4 hover:bg-slate-50"
+      >
+        <div className="font-medium">
+          Photonics
+        </div>
+        <div className="text-sm text-slate-500">
+          Optical technologies and integrated photonics.
+        </div>
+      </Link>
+
+      <Link
+        href="/semiconductor-supply-chain"
+        className="block px-6 py-4 hover:bg-slate-50"
+      >
+        <div className="font-medium">
+          Supply Chain
+        </div>
+        <div className="text-sm text-slate-500">
+          Equipment, materials and supporting industries.
+        </div>
+      </Link>
+
+      <Link
+        href="/workforce"
+        className="block px-6 py-4 hover:bg-slate-50"
+      >
+        <div className="font-medium">
+          Workforce Development
+        </div>
+        <div className="text-sm text-slate-500">
+          Building Australia's semiconductor talent pipeline.
+        </div>
+      </Link>
+
+    </div>
+
+    </div>
+)}
 </div>
-<Link
-    href="/membership"
-    className={navClass("/membership")}
->
-    Membership
-</Link>
-
- <Link
-    href="/news"
-    className={navClass("/news")}
->
-    News
-</Link>           
 
 <Link
-    href="/events"
-    className={navClass("/events")}
+  href="/membership"
+  className={
+    pathname === "/membership"
+      ? "text-blue-600 font-semibold"
+      : ""
+  }
 >
-    Events
+  Membership
+</Link>
+            <Link
+  href="/news"
+  className={
+    pathname === "/news"
+      ? "text-blue-600 font-semibold"
+      : ""
+  }
+>
+  News
+</Link>
+            <Link
+  href="/events"
+  className={
+    pathname === "/events"
+      ? "text-blue-600 font-semibold"
+      : ""
+  }
+>
+  Events
+</Link>
+            <Link
+  href="/contact"
+  className={
+    pathname === "/contact"
+      ? "text-blue-600 font-semibold"
+      : ""
+  }
+>
+  Contact
 </Link>
 
-<Link
-    href="/contact"
-    className={navClass("/contact")}
->
-    Contact
-</Link>
-
-<a
-  href="#"
-  className="w-9 h-9 rounded-md bg-[#0066FF] flex items-center justify-center text-white font-bold hover:bg-blue-700 transition"
-  aria-label="LinkedIn"
->
-  in
-</a> 
+ 
             <Link
               href="/join"
               className="bg-slate-900 text-white px-5 py-2 rounded-md"
@@ -205,4 +288,5 @@ import { Search, ChevronDown } from "lucide-react";
       )}
 
     </header>
-
+  );
+}
