@@ -5,7 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import MegaMenu from "./MegaMenu";
-import { Search, Linkedin, ChevronDown } from "lucide-react";
+import { Search, ChevronDown } from "lucide-react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
