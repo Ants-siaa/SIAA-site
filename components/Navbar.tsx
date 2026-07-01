@@ -125,6 +125,13 @@ export default function Navbar() {
     <Search size={20}/>
 </button> 
 
+<a
+  href="#"
+  className="w-9 h-9 rounded-md bg-[#0066FF] flex items-center justify-center text-white font-bold hover:bg-blue-700 transition"
+  aria-label="LinkedIn"
+>
+  in
+</a>
 
             <Link
             href="/join"
