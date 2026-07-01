@@ -5,54 +5,7 @@ export default function Home() {
   return (
     <main className="bg-white text-slate-900">
 
-      {/* ================= NAVBAR ================= */}
-      <header className="sticky top-0 z-50 bg-white border-b">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
-          {/* Logo */}
-          <div className="flex items-center gap-3">
-            <Image
-  src="/images/Blue microchip with Australia map.png"
-  alt="SIAA Logo"
-  width={60}
-  height={60}
-  priority
-/>
-            <div>
-              <p className="font-bold text-2xl">SIAA</p>
-              <p className="text-xs text-slate-500">
-                Semiconductor Industry Association of Australia
-              </p>
-            </div>
-          </div>
-
-          {/* Nav */}
-          <nav className="hidden lg:flex items-center gap-8 text-sm font-medium">
-            <Link className="text-blue-600 border-b-2 border-blue-600 pb-1" href="/">
-              Home
-            </Link>
-            <Link href="/about">About</Link>
-            <Link href="/membership">Membership</Link>
-            <Link href="/industry">Industry</Link>
-            <Link href="/news">News & Insights</Link>
-            <Link href="/events">Events</Link>
-            <Link href="/contact">Contact</Link>
-          </nav>
-
-          {/* Actions */}
-          <div className="flex items-center gap-4">
-            <div className="w-9 h-9 rounded-full bg-slate-100" /> {/* search icon placeholder */}
-            <div className="w-9 h-9 rounded-md bg-blue-600/10" /> {/* linkedin placeholder */}
-
-            <Link
-              href="/membership"
-              className="bg-blue-700 text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-blue-800"
-            >
-              Join SIAA
-            </Link>
-          </div>
-        </div>
-      </header>
 
       {/* ================= HERO ================= */}
       <section className="relative">
