@@ -50,15 +50,11 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <nav className="hidden lg:flex items-center gap-8">
 
-            <Link
-  href="/"
-  className={
-    pathname === "/home"
-      ? "text-blue-600 font-semibold"
-      : ""
-  }
+           <Link
+    href="/"
+    className={navClass("/home")}
 >
-  Home
+    Home
 </Link>
            <Link
     href="/about"
@@ -169,46 +165,33 @@ export default function Navbar() {
 </div>
 
 <Link
-  href="/membership"
-  className={
-    pathname === "/membership"
-      ? "text-blue-600 font-semibold"
-      : ""
-  }
+    href="/membership"
+    className={navClass("/membership")}
 >
-  Membership
-</Link>
-            <Link
-  href="/news"
-  className={
-    pathname === "/news"
-      ? "text-blue-600 font-semibold"
-      : ""
-  }
->
-  News
-</Link>
-            <Link
-  href="/events"
-  className={
-    pathname === "/events"
-      ? "text-blue-600 font-semibold"
-      : ""
-  }
->
-  Events
-</Link>
-            <Link
-  href="/contact"
-  className={
-    pathname === "/contact"
-      ? "text-blue-600 font-semibold"
-      : ""
-  }
->
-  Contact
+    Membership
 </Link>
 
+<Link
+    href="/news"
+    className={navClass("/news")}
+>
+    News
+</Link>
+
+<Link
+    href="/events"
+    className={navClass("/events")}
+>
+    Events
+</Link>
+
+<Link
+    href="/contact"
+    className={navClass("/contact")}
+>
+    Contact
+</Link>
+           
  
             <Link
               href="/join"
