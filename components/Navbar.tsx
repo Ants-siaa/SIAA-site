@@ -104,6 +104,10 @@ export default function Navbar() {
 <Link
     href="/news"
     className={navClass("/news")}
+  onClick={() => {
+    setIndustryOpen(false);
+    setMenuOpen(false);
+  }}
 >
     News
 </Link>
@@ -111,6 +115,10 @@ export default function Navbar() {
 <Link
     href="/events"
     className={navClass("/events")}
+  onClick={() => {
+    setIndustryOpen(false);
+    setMenuOpen(false);
+  }}
 >
     Events
 </Link>
@@ -118,6 +126,10 @@ export default function Navbar() {
 <Link
     href="/contact"
     className={navClass("/contact")}
+  onClick={() => {
+    setIndustryOpen(false);
+    setMenuOpen(false);
+  }}
 >
     Contact
 </Link>
