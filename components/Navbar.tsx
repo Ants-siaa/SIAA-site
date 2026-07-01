@@ -40,8 +40,11 @@ export default function Navbar() {
       SIAA
     </div>
 
+    <p className="text-xs text-slate-500">
+                new Semiconductor Industry Association of Australia
+              </p>
     <div className="text-sm text-slate-500 leading-tight">
-      Semiconductor Industry
+      Semiconductor Industry Association of Australia
     </div>
   </div>
 
