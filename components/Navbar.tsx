@@ -59,6 +59,9 @@ export default function Navbar() {
            <Link
     href="/about"
     className={navClass("/about")}
+     onClick={() => {
+    setIndustryOpen(false);
+    setMenuOpen(false);
 >
     About
 </Link>
