@@ -6,13 +6,6 @@ import Link from "next/link";
 import Image from "next/image";
 import MegaMenu from "./MegaMenu";
 import { Search, ChevronDown } from "lucide-react";
-import { useState, useRef } from "react";
-
-export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [industryOpen, setIndustryOpen] = useState(false);
-  const pathname = usePathname();
-  const closeTimer = useRef<NodeJS.Timeout | null>(null);
 
   const navClass = (path: string) =>
   pathname === path
@@ -23,12 +16,6 @@ export default function Navbar() {
     clearTimeout(closeTimer.current);
   }
   setIndustryOpen(true);
-};
-
-const closeMenu = () => {
-  closeTimer.current = setTimeout(() => {
-    setIndustryOpen(false);
-  }, 200);
 };
 
   return (
