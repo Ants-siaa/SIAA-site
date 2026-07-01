@@ -93,6 +93,10 @@ export default function Navbar() {
 <Link
     href="/membership"
     className={navClass("/membership")}
+  onClick={() => {
+    setIndustryOpen(false);
+    setMenuOpen(false);
+  }}
 >
     Membership
 </Link>
