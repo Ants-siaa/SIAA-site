@@ -124,6 +124,16 @@ export default function Navbar() {
 >
     <Search size={20}/>
 </button> 
+
+<a
+    href="https://linkedin.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="rounded-md bg-[#0066FF] p-2 text-white hover:bg-blue-700 transition"
+    aria-label="LinkedIn"
+>
+    <Linkedin size={18}/>
+</a>
             <Link
               href="/join"
               className="bg-slate-900 text-white px-5 py-2 rounded-md"
