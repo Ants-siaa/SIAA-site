@@ -5,6 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Search, ChevronDown } from "lucide-react";
+import { useState, useRef } from "react";
 
 import MegaMenu from "./MegaMenu";
 
@@ -12,6 +13,21 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [industryOpen, setIndustryOpen] = useState(false);
   const pathname = usePathname();
+  const closeTimer = useRef<NodeJS.Timeout | null>(null);
+
+  const openMenu = () => {
+  if (closeTimer.current) {
+    clearTimeout(closeTimer.current);
+  }
+  setIndustryOpen(true);
+};
+
+const closeMenu = () => {
+  closeTimer.current = setTimeout(() => {
+    setIndustryOpen(false);
+  }, 200);
+};
+  
   const navClass = (path: string) =>
   pathname === path
     ? "text-blue-600 font-semibold border-b-2 border-blue-600 pb-1 transition-colors"
@@ -61,8 +77,8 @@ export default function Navbar() {
 </Link>
             <div
   className="relative py-4 -my-4"
-  onMouseEnter={() => setIndustryOpen(true)}
-    onMouseLeave={() => setIndustryOpen(false)}
+  onMouseEnter={openMenu}
+onMouseLeave={closeMenu}
 >
 
     <button
