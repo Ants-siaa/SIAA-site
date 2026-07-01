@@ -53,6 +53,10 @@ export default function Navbar() {
            <Link
     href="/"
     className={navClass("/home")}
+             onClick={() => {
+    setIndustryOpen(false);
+    setMenuOpen(false);
+  }}
 >
     Home
 </Link>
