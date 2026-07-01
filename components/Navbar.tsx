@@ -164,14 +164,10 @@ export default function Navbar() {
 </div>
 
 <Link
-  href="/membership"
-  className={
-    pathname === "/membership"
-      ? "text-blue-600 font-semibold"
-      : ""
-  }
+    href="/membership"
+    className={navClass("/membership")}
 >
-  Membership
+    Membership
 </Link>
             <Link
   href="/news"
