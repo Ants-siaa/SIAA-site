@@ -205,5 +205,5 @@ import { Search, ChevronDown } from "lucide-react";
       )}
 
     </header>
-  );
+
 }
