@@ -61,108 +61,34 @@ export default function Navbar() {
 >
     About
 </Link>
-            <div
-  className="relative py-4 -my-4"
-  onMouseEnter={() => setIndustryOpen(true)}
-  onMouseLeave={() => setIndustryOpen(false)}
+
+<div
+    className="relative"
+    onMouseEnter={() => setIndustryOpen(true)}
+    onMouseLeave={() => setIndustryOpen(false)}
 >
-  <button className="flex items-center gap-1">
-    Industry
-    <span className="text-xs">▼</span>
-  </button>
 
-  {industryOpen && (
-  <div className="absolute top-full left-0 w-96 bg-white rounded-xl shadow-xl border border-slate-200 overflow-hidden">
+    <button
+        className={`flex items-center gap-1 ${
+            pathname.startsWith("/industry")
+                ? "text-blue-600 font-semibold border-b-2 border-blue-600 pb-1"
+                : "text-slate-700 hover:text-blue-600 transition-colors"
+        }`}
+    >
+        Industry
 
-    <div className="bg-slate-900 text-white px-6 py-4">
-      <h3 className="font-semibold">
-        Australia's Semiconductor Ecosystem
-      </h3>
-      <p className="text-sm text-slate-300 mt-1">
-        Explore key sectors of the industry.
-      </p>
-    </div>
+        <ChevronDown
+            size={16}
+            className={`transition-transform ${
+                industryOpen ? "rotate-180" : ""
+            }`}
+        />
 
-    <div className="py-2">
+    </button>
 
-      <Link
-        href="/semiconductor-manufacturing-australia"
-        className="block px-6 py-4 hover:bg-slate-50"
-      >
-        <div className="font-medium">
-          Semiconductor Manufacturing
-        </div>
-        <div className="text-sm text-slate-500">
-          Fabrication, packaging and advanced manufacturing.
-        </div>
-      </Link>
+    <MegaMenu open={industryOpen} />
 
-      <Link
-        href="/australian-chip-design"
-        className="block px-6 py-4 hover:bg-slate-50"
-      >
-        <div className="font-medium">
-          Chip Design
-        </div>
-        <div className="text-sm text-slate-500">
-          IC design, EDA and emerging technologies.
-        </div>
-      </Link>
-
-      <Link
-        href="/compound-semiconductors-australia"
-        className="block px-6 py-4 hover:bg-slate-50"
-      >
-        <div className="font-medium">
-          Compound Semiconductors
-        </div>
-        <div className="text-sm text-slate-500">
-          GaN, SiC and next-generation materials.
-        </div>
-      </Link>
-
-      <Link
-        href="/photonics-australia"
-        className="block px-6 py-4 hover:bg-slate-50"
-      >
-        <div className="font-medium">
-          Photonics
-        </div>
-        <div className="text-sm text-slate-500">
-          Optical technologies and integrated photonics.
-        </div>
-      </Link>
-
-      <Link
-        href="/semiconductor-supply-chain"
-        className="block px-6 py-4 hover:bg-slate-50"
-      >
-        <div className="font-medium">
-          Supply Chain
-        </div>
-        <div className="text-sm text-slate-500">
-          Equipment, materials and supporting industries.
-        </div>
-      </Link>
-
-      <Link
-        href="/workforce"
-        className="block px-6 py-4 hover:bg-slate-50"
-      >
-        <div className="font-medium">
-          Workforce Development
-        </div>
-        <div className="text-sm text-slate-500">
-          Building Australia's semiconductor talent pipeline.
-        </div>
-      </Link>
-
-    </div>
-
-    </div>
-)}
 </div>
-
 <Link
     href="/membership"
     className={navClass("/membership")}
