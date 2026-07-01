@@ -118,7 +118,12 @@ export default function Navbar() {
     Contact
 </Link>
            
- 
+<button
+    aria-label="Search"
+    className="rounded-full p-2 hover:bg-slate-100 transition"
+>
+    <Search size={20}/>
+</button> 
             <Link
               href="/join"
               className="bg-slate-900 text-white px-5 py-2 rounded-md"
