@@ -148,7 +148,9 @@ export default function Home() {
       
 {/* ================= KEY FOCUS ================= */}
       
-    <StrategicPriorities />
+  <IndustrySectors />
+
+<StrategicPriorities />
 
       {/* ================= NEWS ================= */}
       <section className="py-20">
