@@ -1,3 +1,4 @@
+import StrategicPriorities from "../components/StrategicPriorities";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -143,75 +144,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* ================= KEY FOCUS ================= */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6">
-
-          <h2 className="text-3xl font-bold text-center">
-            Our key focus areas
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
-
-            {const focusAreas = [
-  {
-    title: "Workforce & Skills",
-    image: "/images/workforce.png",
-    description:
-      "Building Australia's next generation of semiconductor engineers, technicians and researchers.",
-    link: "/workforce",
-  },
-  {
-    title: "Global Partnerships",
-    image: "/images/global-network.png",
-    description:
-      "Connecting Australia with the world's leading semiconductor ecosystems.",
-    link: "/global-partnerships",
-  },
-  {
-    title: "Industry Advocacy",
-    image: "/images/parliament.png",
-    description:
-      "Championing policies and investment that strengthen Australia's semiconductor future.",
-    link: "/advocacy",
-  },
-]{focusAreas.map((item) => (
-  <div
-    key={item.title}
-    className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-  >
-    <div className="relative h-52">
-      <Image
-        src={item.image}
-        alt={item.title}
-        fill
-        className="object-cover"
-      />
-    </div>
-
-    <div className="p-6">
-      <h3 className="text-xl font-semibold">
-        {item.title}
-      </h3>
-
-      <p className="mt-3 text-slate-600">
-        {item.description}
-      </p>
-
-      <Link
-        href={item.link}
-        className="inline-block mt-6 text-blue-600 font-medium hover:text-blue-800"
-      >
-        Learn more →
-      </Link>
-    </div>
-  </div>
-))}
-
-          </div>
-        </div>
-      </section>
+      
+{/* ================= KEY FOCUS ================= */}
+      
+    <StrategicPriorities />
 
       {/* ================= NEWS ================= */}
       <section className="py-20">
