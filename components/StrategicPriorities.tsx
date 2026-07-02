@@ -11,7 +11,7 @@ const focusAreas = [
   },
   {
     title: "Global Partnerships",
-    image: "/images/global-network.png",
+    image: "/images/Global-network.png",
     description:
       "Connecting Australia with the world's leading semiconductor ecosystems through strategic partnerships, investment and collaboration.",
     link: "/about",
