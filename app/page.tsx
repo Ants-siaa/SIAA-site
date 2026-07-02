@@ -154,26 +154,60 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8 mt-12">
 
-            {[
-              ["Workforce & Skills", "Building a pipeline for advanced tech roles."],
-              ["Industry Growth", "Supporting innovation and scale globally."],
-              ["Global Engagement", "Strengthening international partnerships."]
-            ].map(([title, desc], i) => (
-              <div key={i} className="bg-white rounded-xl overflow-hidden shadow-sm">
+            {const focusAreas = [
+  {
+    title: "Workforce & Skills",
+    image: "/images/workforce.png",
+    description:
+      "Building Australia's next generation of semiconductor engineers, technicians and researchers.",
+    link: "/workforce",
+  },
+  {
+    title: "Global Partnerships",
+    image: "/images/global-network.png",
+    description:
+      "Connecting Australia with the world's leading semiconductor ecosystems.",
+    link: "/global-partnerships",
+  },
+  {
+    title: "Industry Advocacy",
+    image: "/images/parliament.png",
+    description:
+      "Championing policies and investment that strengthen Australia's semiconductor future.",
+    link: "/advocacy",
+  },
+]{focusAreas.map((item) => (
+  <div
+    key={item.title}
+    className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+  >
+    <div className="relative h-52">
+      <Image
+        src={item.image}
+        alt={item.title}
+        fill
+        className="object-cover"
+      />
+    </div>
 
-                {/* image placeholder */}
-                <div className="h-44 bg-slate-200 flex items-center justify-center text-slate-500">
-                  Image
-                </div>
+    <div className="p-6">
+      <h3 className="text-xl font-semibold">
+        {item.title}
+      </h3>
 
-                <div className="p-6">
-                  <h3 className="font-semibold">{title}</h3>
-                  <p className="text-sm text-slate-500 mt-2">{desc}</p>
-                  <p className="text-blue-600 text-sm mt-4">Learn more →</p>
-                </div>
+      <p className="mt-3 text-slate-600">
+        {item.description}
+      </p>
 
-              </div>
-            ))}
+      <Link
+        href={item.link}
+        className="inline-block mt-6 text-blue-600 font-medium hover:text-blue-800"
+      >
+        Learn more →
+      </Link>
+    </div>
+  </div>
+))}
 
           </div>
         </div>
