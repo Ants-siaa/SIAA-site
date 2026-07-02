@@ -4,21 +4,21 @@ import Image from "next/image";
 const focusAreas = [
   {
     title: "Workforce & Skills",
-    image: "/images/workforce.png",
+    image: "/images/workforce.jpg",
     description:
       "Building Australia's next generation of semiconductor engineers, technicians and researchers.",
     link: "/workforce",
   },
   {
     title: "Global Partnerships",
-    image: "/images/global-network.png",
+    image: "/images/global-network.jpg",
     description:
       "Connecting Australia with the world's leading semiconductor ecosystems.",
     link: "/global-partnerships",
   },
   {
     title: "Industry Advocacy",
-    image: "/images/parliament.png",
+    image: "/images/parliament.jpg",
     description:
       "Championing policies and investment that strengthen Australia's semiconductor future.",
     link: "/advocacy",
