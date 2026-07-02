@@ -1,4 +1,5 @@
 import StrategicPriorities from "../components/StrategicPriorities";
+import IndustrySectors from "../components/IndustrySectors";
 import Link from "next/link";
 import Image from "next/image";
 
