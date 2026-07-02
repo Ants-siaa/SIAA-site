@@ -89,9 +89,17 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
           {/* IMAGE */}
-          <div className="h-[380px] bg-slate-100 rounded-xl flex items-center justify-center">
-            <p className="text-slate-500">About Image Placeholder</p>
-          </div>
+<div className="relative h-[380px] rounded-xl overflow-hidden shadow-lg">
+  <Image
+    src="/images/about-mission.png"
+    alt="SIAA mission - collaboration across industry, government and research"
+    fill
+    className="object-cover transition-transform duration-500 hover:scale-105"
+  />
+
+  {/* Optional subtle overlay for text consistency */}
+  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 to-transparent" />
+</div>
 
           {/* TEXT */}
           <div>
