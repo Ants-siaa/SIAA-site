@@ -112,13 +112,7 @@ export default function Home() {
             </h2>
 
             <p className="mt-4 text-slate-600 leading-relaxed">
-              We support collaboration across industry, government and research
-              to grSIAA brings together industry, government, research organisations
-              and education providers to strengthen Australia's semiconductor ecosystem. 
-              Through collaboration, advocacy and strategic partnerships, we help 
-              accelerate innovation, develop workforce capability and position Australia 
-              as a trusted global partner in advanced technology.  Australia’s semiconductor ecosystem and secure its place
-              in the global economy.
+              SIAA brings together industry, government, research organisations and education providers to strengthen Australia's semiconductor ecosystem. Through collaboration, advocacy and strategic partnerships, we help accelerate innovation, develop workforce capability and position Australia as a trusted global partner in advanced technology.
             </p>
 
             {/* ICON ROW */}
