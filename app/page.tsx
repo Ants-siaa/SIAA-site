@@ -49,16 +49,15 @@ export default function Home() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="relative bg-slate-100 flex items-center justify-center">
-
-            {/* HERO IMAGE PLACEHOLDER */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-slate-200" />
-
-            <div className="relative w-[80%] h-[70%] bg-white/40 backdrop-blur rounded-xl border border-white/40 flex items-center justify-center">
-              <p className="text-slate-600">
-                Semiconductor Chip / Australia Map Image Placeholder
-              </p>
-            </div>
+<div className="relative min-h-[600px] overflow-hidden">
+  <Image
+    src="/images/homepage-hero.png"
+    alt="Australia's Semiconductor Future"
+    fill
+    priority
+    className="object-cover"
+  />
+</div>
 
           </div>
         </div>
