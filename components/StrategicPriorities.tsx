@@ -11,14 +11,14 @@ const focusAreas = [
   },
   {
     title: "Global Partnerships",
-    image: "/images/global-network.jpg",
+    image: "/images/Global-network.jpg",
     description:
       "Connecting Australia with the world's leading semiconductor ecosystems.",
     link: "/global-partnerships",
   },
   {
     title: "Industry Advocacy",
-    image: "/images/parliament.jpg",
+    image: "/images/parliament.jpeg",
     description:
       "Championing policies and investment that strengthen Australia's semiconductor future.",
     link: "/advocacy",
