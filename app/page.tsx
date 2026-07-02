@@ -58,7 +58,7 @@ export default function Home() {
     className="object-cover"
   />
 </div>
-
+        </div>
           </div>
         </div>
       </section>
