@@ -1,4 +1,5 @@
-<footer className="bg-slate-950 text-white">
+import Image from "next/image";
+import Link from "next/link";<footer className="bg-slate-950 text-white">
 
   <div className="max-w-7xl mx-auto px-6 py-16">
 
