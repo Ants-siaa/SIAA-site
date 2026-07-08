@@ -9,7 +9,7 @@ import Link from "next/link";<footer className="bg-slate-950 text-white">
       <div>
 
         <Image
-          src="/images/SIAA-logo-white.png"
+          src="/images/siaa-logo-white.png"
           alt="SIAA"
           width={180}
           height={55}
