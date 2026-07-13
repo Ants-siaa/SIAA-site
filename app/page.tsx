@@ -156,11 +156,9 @@ export default function Home() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
 
-          <div className="flex justify-between items-center">
-            <div className="flex justify-between items-center">
+<div className="flex justify-between items-center">
 
   <div>
-
     <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
       Intelligence Centre
     </p>
@@ -168,8 +166,16 @@ export default function Home() {
     <h2 className="text-3xl font-bold mt-2">
       Today's Semiconductor Intelligence
     </h2>
-
   </div>
+
+  <Link
+    href="/intelligence"
+    className="text-blue-600 font-medium hover:underline"
+  >
+    View Today's Briefing →
+  </Link>
+
+</div>
 
   <Link
     href="/intelligence"
