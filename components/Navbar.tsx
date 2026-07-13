@@ -19,10 +19,16 @@ const [aboutOpen, setAboutOpen] = useState(false);
 
 
  
-  const navClass = (path: string) =>
-  pathname === path
+ const navClass = (path: string) => {
+  const active =
+    pathname === path ||
+    pathname.startsWith(path + "/");
+
+  return active
     ? "text-blue-600 font-semibold border-b-2 border-blue-600 pb-1 transition-colors"
     : "text-slate-700 hover:text-blue-600 transition-colors";
+};
+  
 useEffect(() => {
   function handleClickOutside(event: MouseEvent) {
     if (
