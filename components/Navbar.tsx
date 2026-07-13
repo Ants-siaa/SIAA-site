@@ -37,7 +37,6 @@ useEffect(() => {
       setOpenMenu(null);
       setMenuOpen(false);
     }
-  }
 
   document.addEventListener("mousedown", handleClickOutside);
 
