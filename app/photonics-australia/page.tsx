@@ -1,6 +1,7 @@
 import PageHero from "@/components/PageHero";
 import Image from "next/image";
 import Link from "next/link";
+import CTASection from "@/components/CTASection";
 
 export default function PhotonicsPage() {
   return (
@@ -232,41 +233,10 @@ export default function PhotonicsPage() {
 
       {/* ================= CTA ================= */}
 
-      <section className="bg-blue-900 text-white py-20">
-
-        <div className="max-w-4xl mx-auto text-center px-6">
-
-          <h2 className="text-4xl font-bold">
-            Advancing Australia's Photonics Industry
-          </h2>
-
-          <p className="mt-6 text-blue-100 text-lg">
-            SIAA connects researchers, manufacturers, technology companies
-            and government to strengthen Australia's leadership in photonics
-            and integrated semiconductor technologies.
-          </p>
-
-          <div className="mt-10 flex justify-center gap-4">
-
-            <Link
-              href="/membership"
-              className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-slate-100"
-            >
-              Join SIAA
-            </Link>
-
-            <Link
-              href="/contact"
-              className="border border-white px-8 py-4 rounded-lg hover:bg-white/10"
-            >
-              Contact Us
-            </Link>
-
-          </div>
-
-        </div>
-
-      </section>
+<CTASection
+  title="Advance Australia's Photonics Industry"
+  description="Join the organisations shaping Australia's future in photonics and optical technologies."
+/>
 
     </main>
   );
