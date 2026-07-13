@@ -13,6 +13,9 @@ export default function Navbar() {
   const [industryOpen, setIndustryOpen] = useState(false);
   const industryRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
+  const [intelligenceOpen, setIntelligenceOpen] = useState(false);
+const [resourcesOpen, setResourcesOpen] = useState(false);
+const [aboutOpen, setAboutOpen] = useState(false);
 
 
  
@@ -124,16 +127,65 @@ useEffect(() => {
     Membership
 </Link>
 
-<Link
-    href="/intelligence"
-    className={navClass("/news")}
-  onClick={() => {
-    setIndustryOpen(false);
-    setMenuOpen(false);
-  }}
->
+<div className="relative">
+
+  <button
+    onClick={() => {
+      setIntelligenceOpen(!intelligenceOpen);
+      setIndustryOpen(false);
+      setResourcesOpen(false);
+      setAboutOpen(false);
+    }}
+    className="flex items-center gap-1 text-slate-700 hover:text-blue-600 transition-colors"
+  >
     Intelligence
-</Link>
+
+    <ChevronDown
+      size={16}
+      className={`transition-transform ${
+        intelligenceOpen ? "rotate-180" : ""
+      }`}
+    />
+
+  </button>
+
+  {intelligenceOpen && (
+
+    <div className="absolute top-full mt-4 w-72 bg-white rounded-xl shadow-xl border border-slate-200 py-2">
+
+      <Link href="/intelligence" className="block px-5 py-3 hover:bg-slate-50">
+        Today's Briefing
+      </Link>
+
+      <Link href="/intelligence#australia" className="block px-5 py-3 hover:bg-slate-50">
+        Australian Industry
+      </Link>
+
+      <Link href="/intelligence#global" className="block px-5 py-3 hover:bg-slate-50">
+        Global News
+      </Link>
+
+      <Link href="/intelligence#research" className="block px-5 py-3 hover:bg-slate-50">
+        Research
+      </Link>
+
+      <Link href="/intelligence#policy" className="block px-5 py-3 hover:bg-slate-50">
+        Government & Policy
+      </Link>
+
+      <Link href="/intelligence#funding" className="block px-5 py-3 hover:bg-slate-50">
+        Funding
+      </Link>
+
+      <Link href="/intelligence#events" className="block px-5 py-3 hover:bg-slate-50">
+        Events
+      </Link>
+
+    </div>
+
+  )}
+
+</div>
 
 <Link
     href="/events"
