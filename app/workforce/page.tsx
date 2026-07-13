@@ -1,3 +1,4 @@
+import PageHero from "@/components/PageHero";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,40 +7,12 @@ export default function WorkforcePage() {
     <main className="bg-white text-slate-900">
 
       {/* ================= HERO ================= */}
-      <section className="relative h-[460px] overflow-hidden">
-
-        <Image
-          src="/images/workforce.png"
-          alt="Semiconductor Workforce Development"
-          fill
-          priority
-          className="object-cover"
-        />
-
-        <div className="absolute inset-0 bg-slate-950/65" />
-
-        <div className="absolute inset-0 flex items-center">
-          <div className="max-w-7xl mx-auto px-6 text-white">
-
-            <p className="uppercase tracking-[0.3em] text-blue-300">
-              Workforce Development
-            </p>
-
-            <h1 className="mt-4 text-5xl font-bold">
-              Building Australia's Semiconductor Workforce
-            </h1>
-
-            <p className="mt-6 max-w-3xl text-xl text-slate-200 leading-relaxed">
-              Australia's semiconductor future depends on a highly skilled
-              workforce. SIAA works with industry, government and education
-              providers to strengthen the talent pipeline from school through
-              to advanced manufacturing, research and leadership.
-            </p>
-
-          </div>
-        </div>
-
-      </section>
+   <PageHero
+  eyebrow="Workforce Development"
+  title="Building Australia's Semiconductor Workforce"
+  subtitle="Australia's semiconductor future depends on a highly skilled workforce. SIAA works with industry, government and education providers to strengthen the talent pipeline."
+  image="/images/workforce.png"
+/>
 
       {/* ================= INTRO ================= */}
 
