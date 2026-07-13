@@ -125,37 +125,45 @@ export default function MembershipPage() {
 
               </thead>
 
-              <tbody>
+             <tbody>
 
-                <tr className="border-t">
-                  <td className="p-5">Corporate Member</td>
-                  <td className="p-5 text-right font-semibold">
-                    {/* UPDATE WITH STRIPE PRICE */}
-                  </td>
-                </tr>
+  <tr className="border-t hover:bg-slate-50">
+    <td className="p-5 font-medium">
+      Individual Member
+    </td>
+    <td className="p-5 text-right font-semibold text-blue-700">
+      $100
+    </td>
+  </tr>
 
-                <tr className="border-t">
-                  <td className="p-5">SME Member</td>
-                  <td className="p-5 text-right font-semibold">
-                    {/* UPDATE */}
-                  </td>
-                </tr>
+  <tr className="border-t hover:bg-slate-50">
+    <td className="p-5 font-medium">
+      SME / University Group
+    </td>
+    <td className="p-5 text-right font-semibold text-blue-700">
+      $1,000
+    </td>
+  </tr>
 
-                <tr className="border-t">
-                  <td className="p-5">Individual Member</td>
-                  <td className="p-5 text-right font-semibold">
-                    {/* UPDATE */}
-                  </td>
-                </tr>
+  <tr className="border-t hover:bg-slate-50">
+    <td className="p-5 font-medium">
+      Corporate / Government
+    </td>
+    <td className="p-5 text-right font-semibold text-blue-700">
+      $2,500
+    </td>
+  </tr>
 
-                <tr className="border-t">
-                  <td className="p-5">Student Member</td>
-                  <td className="p-5 text-right font-semibold">
-                    {/* UPDATE */}
-                  </td>
-                </tr>
+  <tr className="border-t hover:bg-slate-50">
+    <td className="p-5 font-medium">
+      Corporate / Government (100+ employees)
+    </td>
+    <td className="p-5 text-right font-semibold text-blue-700">
+      $5,000
+    </td>
+  </tr>
 
-              </tbody>
+</tbody>
 
             </table>
 
