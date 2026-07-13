@@ -1,6 +1,7 @@
 import PageHero from "@/components/PageHero";
 import Image from "next/image";
 import Link from "next/link";
+import CTASection from "@/components/CTASection";
 
 export default function WorkforcePage() {
   return (
