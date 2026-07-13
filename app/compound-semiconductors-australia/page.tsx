@@ -1,3 +1,4 @@
+import PageHero from "@/components/PageHero";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,41 +7,12 @@ export default function CompoundSemiconductorsPage() {
     <main className="bg-white text-slate-900">
 
       {/* ================= HERO ================= */}
-      <section className="relative h-[460px] overflow-hidden">
-
-        <Image
-          src="/images/compound-semiconductors.png"
-          alt="Compound Semiconductors Australia"
-          fill
-          priority
-          className="object-cover"
-        />
-
-        <div className="absolute inset-0 bg-slate-950/70" />
-
-        <div className="absolute inset-0 flex items-center">
-          <div className="max-w-7xl mx-auto px-6 text-white">
-
-            <p className="uppercase tracking-[0.3em] text-blue-300">
-              Industry Sector
-            </p>
-
-            <h1 className="mt-4 text-5xl font-bold">
-              Compound Semiconductors
-            </h1>
-
-            <p className="mt-6 max-w-3xl text-xl text-slate-200 leading-relaxed">
-              Compound semiconductors are enabling the next generation of
-              high-performance electronics for defence, telecommunications,
-              renewable energy, electric vehicles, aerospace and quantum
-              technologies. Australia has internationally recognised expertise
-              in advanced materials, device research and commercial innovation.
-            </p>
-
-          </div>
-        </div>
-
-      </section>
+      <PageHero
+  eyebrow="Industry"
+  title="Compound Semiconductors"
+  subtitle="Compound semiconductors underpin next-generation power electronics, RF communications, defence systems, photonics and quantum technologies."
+  image="/images/compound-semiconductors.png"
+/>
 
       {/* ================= INTRO ================= */}
 
