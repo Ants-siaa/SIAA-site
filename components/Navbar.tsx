@@ -101,10 +101,7 @@ useEffect(() => {
   About
 </Link>
             
-           <div
-  ref={navRef}
-  className="relative"
->
+           <div className="relative">
 
     <button
   onClick={() =>
@@ -224,17 +221,7 @@ className={`transition-transform ${
   Contact
 </Link>
 
-<Link
-    href="/contact"
-    className={navClass("/contact")}
-  onClick={() => {
-    setOpenMenu(null);
-    setMenuOpen(false);
-  }}
->
-    Contact
-</Link>
-           
+      
 <button
     aria-label="Search"
     className="rounded-full p-2 hover:bg-slate-100 transition"
