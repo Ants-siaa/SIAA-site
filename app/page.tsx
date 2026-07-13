@@ -184,21 +184,60 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8 mt-10">
 
-            map((_, i) => (
-              <div key={i} className="flex gap-4">
+            <div className="grid md:grid-cols-3 gap-8 mt-10">
 
-                <div className="w-20 h-20 bg-slate-200 rounded" />
+  <Link
+    href="/intelligence#australia"
+    className="rounded-xl border border-slate-200 p-6 hover:shadow-lg transition"
+  >
+    <p className="text-sm font-semibold text-blue-600">
+      🇦🇺 Australian Industry
+    </p>
 
-                <div>
-                  <p className="text-xs text-blue-600">NEWS</p>
-                  <p className="font-medium text-sm">
-                    News headline goes here across two lines
-                  </p>
-                  <p className="text-xs text-slate-400 mt-1">28 June 2026</p>
-                </div>
+    <h3 className="mt-3 font-semibold">
+      Latest Australian semiconductor developments
+    </h3>
 
-              </div>
-            ))}
+    <p className="mt-3 text-sm text-slate-600">
+      Funding announcements, industry news and Australian company updates.
+    </p>
+  </Link>
+
+  <Link
+    href="/intelligence#global"
+    className="rounded-xl border border-slate-200 p-6 hover:shadow-lg transition"
+  >
+    <p className="text-sm font-semibold text-blue-600">
+      🌏 Global Industry
+    </p>
+
+    <h3 className="mt-3 font-semibold">
+      International semiconductor news
+    </h3>
+
+    <p className="mt-3 text-sm text-slate-600">
+      TSMC, Intel, Samsung, NVIDIA and worldwide industry developments.
+    </p>
+  </Link>
+
+  <Link
+    href="/intelligence#research"
+    className="rounded-xl border border-slate-200 p-6 hover:shadow-lg transition"
+  >
+    <p className="text-sm font-semibold text-blue-600">
+      🔬 Research & Innovation
+    </p>
+
+    <h3 className="mt-3 font-semibold">
+      Australian research breakthroughs
+    </h3>
+
+    <p className="mt-3 text-sm text-slate-600">
+      Universities, research organisations and emerging technologies.
+    </p>
+  </Link>
+
+</div>
 
           </div>
 
