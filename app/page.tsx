@@ -184,7 +184,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8 mt-10">
 
-            .map((_, i) => (
+            map((_, i) => (
               <div key={i} className="flex gap-4">
 
                 <div className="w-20 h-20 bg-slate-200 rounded" />
