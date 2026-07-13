@@ -327,8 +327,8 @@ className={`transition-transform ${
           </nav>
 
         </div>
-      )}
+
 
     </header>
-   );}
+   );
 }
