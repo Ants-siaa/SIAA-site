@@ -29,7 +29,7 @@ export default function Navbar() {
 };
   
 useEffect(() => {
-  function handleClickOutside(event: MouseEvent) {
+  const handleClickOutside = (event: MouseEvent) => {
     if (
       navRef.current &&
       !navRef.current.contains(event.target as Node)
@@ -37,6 +37,7 @@ useEffect(() => {
       setOpenMenu(null);
       setMenuOpen(false);
     }
+  };
 
   document.addEventListener("mousedown", handleClickOutside);
 
@@ -45,8 +46,8 @@ useEffect(() => {
   };
 }, []);
 
-  return (
-    <header className="sticky top-0 z-50 bg-white border-b border-slate-200">
+return (
+  <header className="sticky top-0 z-50 bg-white border-b border-slate-200">
 
   <div
     ref={navRef}
