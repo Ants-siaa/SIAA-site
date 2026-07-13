@@ -1,3 +1,4 @@
+import PageHero from "@/components/PageHero";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,43 +8,12 @@ export default function ManufacturingPage() {
 
       {/* ================= HERO ================= */}
 
-      <section className="relative h-[460px] overflow-hidden">
-
-        <Image
-          src="/images/manufacturing.png"
-          alt="Semiconductor Manufacturing Australia"
-          fill
-          priority
-          className="object-cover"
-        />
-
-        <div className="absolute inset-0 bg-slate-950/70" />
-
-        <div className="absolute inset-0 flex items-center">
-
-          <div className="max-w-7xl mx-auto px-6 text-white">
-
-            <p className="uppercase tracking-[0.3em] text-blue-300">
-              Industry Sector
-            </p>
-
-            <h1 className="mt-4 text-5xl font-bold">
-              Semiconductor Manufacturing
-            </h1>
-
-            <p className="mt-6 max-w-3xl text-xl text-slate-200 leading-relaxed">
-              Semiconductor manufacturing underpins the world's digital
-              economy. Australia has decades of expertise in advanced
-              fabrication, specialist manufacturing, research infrastructure
-              and process innovation, creating opportunities to strengthen
-              sovereign capability and participate in global supply chains.
-            </p>
-
-          </div>
-
-        </div>
-
-      </section>
+    <PageHero
+  eyebrow="Industry"
+  title="Semiconductor Manufacturing"
+  subtitle="Australia possesses advanced manufacturing capability spanning research fabrication, commercial production, packaging and specialist semiconductor processes."
+  image="/images/manufacturing.png"
+/>
 
       {/* ================= INTRO ================= */}
 
