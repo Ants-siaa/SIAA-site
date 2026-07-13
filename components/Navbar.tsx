@@ -30,12 +30,23 @@ export default function Navbar() {
   
 useEffect(() => {
   function handleClickOutside(event: MouseEvent) {
+    useEffect(() => {
+  function handleClickOutside(event: MouseEvent) {
     if (
-      industryRef.current &&
-      !industryRef.current.contains(event.target as Node)
+      navRef.current &&
+      !navRef.current.contains(event.target as Node)
     ) {
-      setIndustryOpen(false);
+      setOpenMenu(null);
+      setMenuOpen(false);
     }
+  }
+
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
   }
 
   document.addEventListener("mousedown", handleClickOutside);
@@ -78,7 +89,7 @@ useEffect(() => {
     href="/"
     className={navClass("/home")}
              onClick={() => {
-    setIndustryOpen(false);
+    setOpenMenu(null);
     setMenuOpen(false);
   }}
 >
@@ -88,7 +99,7 @@ useEffect(() => {
   href="/about"
   className={navClass("/about")}
   onClick={() => {
-    setIndustryOpen(false);
+    setOpenMenu(null);
     setMenuOpen(false);
   }}
 >
@@ -96,12 +107,14 @@ useEffect(() => {
 </Link>
             
            <div
-  ref={industryRef}
+  ref={navRef}
   className="relative"
 >
 
     <button
-  onClick={() => setIndustryOpen(!industryOpen)}
+  onClick={() =>
+  setOpenMenu(openMenu === "industry" ? null : "industry")
+}
   className={`flex items-center gap-1 ${
     pathname.startsWith("/industry")
       ? "text-blue-600 font-semibold border-b-2 border-blue-600 pb-1"
@@ -111,13 +124,13 @@ useEffect(() => {
   Industry
   <ChevronDown
     size={16}
-    className={`transition-transform ${
-      industryOpen ? "rotate-180" : ""
-    }`}
+className={`transition-transform ${
+  openMenu === "industry" ? "rotate-180" : ""
+}`}
   />
 </button>
 
-    <MegaMenu open={industryOpen} />
+<MegaMenu open={openMenu === "industry"} />
 
 </div>
 
@@ -125,7 +138,7 @@ useEffect(() => {
     href="/membership"
     className={navClass("/membership")}
   onClick={() => {
-    setIndustryOpen(false);
+    setOpenMenu(null);
     setMenuOpen(false);
   }}
 >
@@ -135,12 +148,13 @@ useEffect(() => {
 <div className="relative">
 
   <button
-    onClick={() => {
-      setIntelligenceOpen(!intelligenceOpen);
-      setIndustryOpen(false);
-      setResourcesOpen(false);
-      setAboutOpen(false);
-    }}
+    onClick={() =>
+  setOpenMenu(
+    openMenu === "intelligence"
+      ? null
+      : "intelligence"
+  )
+}
     className="flex items-center gap-1 text-slate-700 hover:text-blue-600 transition-colors"
   >
     Intelligence
@@ -148,13 +162,15 @@ useEffect(() => {
     <ChevronDown
       size={16}
       className={`transition-transform ${
-        intelligenceOpen ? "rotate-180" : ""
+        openMenu === "intelligence"
+  ? "rotate-180"
+  : ""
       }`}
     />
 
   </button>
 
-  {intelligenceOpen && (
+{openMenu === "intelligence" && (
 
     <div className="absolute top-full mt-4 w-72 bg-white rounded-xl shadow-xl border border-slate-200 py-2">
 
@@ -192,14 +208,10 @@ useEffect(() => {
 
 </div>
 
-<Link
-    href="/events"
-    className={navClass("/events")}
-  onClick={() => {
-    setIndustryOpen(false);
-    setMenuOpen(false);
-  }}
->
+onClick={() => {
+  setOpenMenu(null);
+  setMenuOpen(false);
+}}
     Events
 </Link>
 
@@ -207,7 +219,7 @@ useEffect(() => {
     href="/contact"
     className={navClass("/contact")}
   onClick={() => {
-    setIndustryOpen(false);
+    setOpenMenu(null);
     setMenuOpen(false);
   }}
 >
