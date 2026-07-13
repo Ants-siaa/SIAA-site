@@ -42,21 +42,11 @@ useEffect(() => {
   document.addEventListener("mousedown", handleClickOutside);
 
   return () => {
-    document.removeEventListener(
-      "mousedown",
-      handleClickOutside
-    );
+    document.removeEventListener("mousedown", handleClickOutside);
   };
 }, []);
   }
 
-  document.addEventListener("mousedown", handleClickOutside);
-
-  return () => {
-    document.removeEventListener("mousedown", handleClickOutside);
-  };
-}, []);
-  return (
     <header className="sticky top-0 z-50 bg-white border-b border-slate-200">
 
   <div
