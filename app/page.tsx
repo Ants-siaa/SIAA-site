@@ -185,14 +185,12 @@ export default function Home() {
   </Link>
 
 </div>
-            <p className="text-blue-600 text-sm">View all →</p>
+           
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mt-10">
 
-            <div className="grid md:grid-cols-3 gap-8 mt-10">
-
-  <Link
+   <Link
     href="/intelligence#australia"
     className="rounded-xl border border-slate-200 p-6 hover:shadow-lg transition"
   >
