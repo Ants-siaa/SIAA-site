@@ -1,6 +1,7 @@
 import PageHero from "@/components/PageHero";
 import Image from "next/image";
 import Link from "next/link";
+import CTASection from "@/components/CTASection";
 
 export default function ChipDesignPage() {
   return (
@@ -216,40 +217,10 @@ export default function ChipDesignPage() {
 
       {/* ================= CTA ================= */}
 
-      <section className="bg-blue-900 text-white py-20">
-
-        <div className="max-w-4xl mx-auto text-center px-6">
-
-          <h2 className="text-4xl font-bold">
-            Help Shape Australia's Semiconductor Future
-          </h2>
-
-          <p className="mt-6 text-blue-100 text-lg">
-            Join SIAA to collaborate with Australia's leading chip designers,
-            researchers, manufacturers and technology companies.
-          </p>
-
-          <div className="mt-10 flex justify-center gap-4">
-
-            <Link
-              href="/membership"
-              className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-slate-100"
-            >
-              Join SIAA
-            </Link>
-
-            <Link
-              href="/contact"
-              className="border border-white px-8 py-4 rounded-lg hover:bg-white/10"
-            >
-              Contact Us
-            </Link>
-
-          </div>
-
-        </div>
-
-      </section>
+<CTASection
+  title="Support Australia's Manufacturing Future"
+  description="Become part of Australia's growing semiconductor manufacturing ecosystem."
+/>
 
     </main>
   );
