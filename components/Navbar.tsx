@@ -207,11 +207,26 @@ className={`transition-transform ${
 
 </div>
 
-onClick={() => {
-  setOpenMenu(null);
-  setMenuOpen(false);
-}}
-    Events
+<Link
+  href="/events"
+  className={navClass("/events")}
+  onClick={() => {
+    setOpenMenu(null);
+    setMenuOpen(false);
+  }}
+>
+  Events
+</Link>
+
+<Link
+  href="/contact"
+  className={navClass("/contact")}
+  onClick={() => {
+    setOpenMenu(null);
+    setMenuOpen(false);
+  }}
+>
+  Contact
 </Link>
 
 <Link
