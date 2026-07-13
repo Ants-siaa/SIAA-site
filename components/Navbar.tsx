@@ -149,12 +149,12 @@ className={`transition-transform ${
 
   <button
     onClick={() =>
-  setOpenMenu(
-    openMenu === "intelligence"
-      ? null
-      : "intelligence"
-  )
-}
+      setOpenMenu(
+        openMenu === "intelligence"
+          ? null
+          : "intelligence"
+      )
+    }
     className="flex items-center gap-1 text-slate-700 hover:text-blue-600 transition-colors"
   >
     Intelligence
@@ -163,11 +163,10 @@ className={`transition-transform ${
       size={16}
       className={`transition-transform ${
         openMenu === "intelligence"
-  ? "rotate-180"
-  : ""
+          ? "rotate-180"
+          : ""
       }`}
     />
-
   </button>
 
 {openMenu === "intelligence" && (
