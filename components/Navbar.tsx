@@ -10,12 +10,11 @@ import MegaMenu from "./MegaMenu";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [industryOpen, setIndustryOpen] = useState(false);
-  const industryRef = useRef<HTMLDivElement>(null);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
+
+  const navRef = useRef<HTMLDivElement>(null);
+
   const pathname = usePathname();
-  const [intelligenceOpen, setIntelligenceOpen] = useState(false);
-const [resourcesOpen, setResourcesOpen] = useState(false);
-const [aboutOpen, setAboutOpen] = useState(false);
 
 
  
