@@ -30,14 +30,10 @@ export default function Navbar() {
   
 useEffect(() => {
   function handleClickOutside(event: MouseEvent) {
-    console.log("clicked");
-
     if (
       navRef.current &&
       !navRef.current.contains(event.target as Node)
     ) {
-      console.log("outside");
-
       setOpenMenu(null);
       setMenuOpen(false);
     }
@@ -46,7 +42,10 @@ useEffect(() => {
   document.addEventListener("mousedown", handleClickOutside);
 
   return () => {
-    document.removeEventListener("mousedown", handleClickOutside);
+    document.removeEventListener(
+      "mousedown",
+      handleClickOutside
+    );
   };
 }, []);
   }
