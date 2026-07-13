@@ -1,4 +1,4 @@
-
+import CTASection from "@/components/CTASection";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -169,41 +169,10 @@ export default function SupplyChainPage() {
 
       {/* ================= CTA ================= */}
 
-      <section className="bg-blue-900 text-white py-20">
-
-        <div className="max-w-4xl mx-auto text-center px-6">
-
-          <h2 className="text-4xl font-bold">
-            Build Australia's Semiconductor Supply Chain
-          </h2>
-
-          <p className="mt-6 text-blue-100 text-lg">
-            SIAA brings together manufacturers, suppliers, researchers and
-            government to strengthen Australia's sovereign semiconductor
-            capability.
-          </p>
-
-          <div className="mt-10 flex justify-center gap-4">
-
-            <Link
-              href="/membership"
-              className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-slate-100"
-            >
-              Join SIAA
-            </Link>
-
-            <Link
-              href="/contact"
-              className="border border-white px-8 py-4 rounded-lg hover:bg-white/10"
-            >
-              Contact Us
-            </Link>
-
-          </div>
-
-        </div>
-
-      </section>
+<CTASection
+  title="Strengthen Australia's Semiconductor Supply Chain"
+  description="Connect with organisations building a resilient sovereign supply chain."
+/>
 
     </main>
   );
