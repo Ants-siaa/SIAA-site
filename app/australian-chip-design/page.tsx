@@ -1,3 +1,4 @@
+import PageHero from "@/components/PageHero";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,43 +7,12 @@ export default function ChipDesignPage() {
     <main className="bg-white text-slate-900">
 
       {/* ================= HERO ================= */}
-      <section className="relative h-[460px] overflow-hidden">
-
-        <Image
-          src="/images/chip-design.png"
-          alt="Australian Chip Design"
-          fill
-          priority
-          className="object-cover"
-        />
-
-        <div className="absolute inset-0 bg-slate-950/70" />
-
-        <div className="absolute inset-0 flex items-center">
-          <div className="max-w-7xl mx-auto px-6 text-white">
-
-            <p className="uppercase tracking-[0.3em] text-blue-300">
-              Industry Sector
-            </p>
-
-            <h1 className="mt-4 text-5xl font-bold">
-              Australian Chip Design
-            </h1>
-
-            <p className="mt-6 max-w-3xl text-xl text-slate-200 leading-relaxed">
-              Australia has earned a global reputation for innovation in
-              semiconductor design. From analogue and mixed-signal circuits
-              through to AI accelerators, photonic integrated circuits and
-              quantum technologies, Australian engineers are creating
-              world-class intellectual property that powers the next
-              generation of electronic systems.
-            </p>
-
-          </div>
-        </div>
-
-      </section>
-
+      <PageHero
+  eyebrow="Industry"
+  title="Australian Chip Design"
+  subtitle="Australia has developed world-class expertise in integrated circuit design, enabling innovation across communications, medical devices, defence, quantum and artificial intelligence."
+  image="/images/chip-design.png"
+/>
       {/* ================= INTRO ================= */}
 
       <section className="py-20">
