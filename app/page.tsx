@@ -157,13 +157,34 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
 
           <div className="flex justify-between items-center">
-            <h2 className="text-3xl font-bold">News & insights</h2>
+            <div className="flex justify-between items-center">
+
+  <div>
+
+    <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
+      Intelligence Centre
+    </p>
+
+    <h2 className="text-3xl font-bold mt-2">
+      Today's Semiconductor Intelligence
+    </h2>
+
+  </div>
+
+  <Link
+    href="/intelligence"
+    className="text-blue-600 font-medium hover:underline"
+  >
+    View Today's Briefing →
+  </Link>
+
+</div>
             <p className="text-blue-600 text-sm">View all →</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mt-10">
 
-            {Array.from({ length: 3 }).map((_, i) => (
+            .map((_, i) => (
               <div key={i} className="flex gap-4">
 
                 <div className="w-20 h-20 bg-slate-200 rounded" />
