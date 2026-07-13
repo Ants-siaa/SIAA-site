@@ -125,14 +125,14 @@ useEffect(() => {
 </Link>
 
 <Link
-    href="/news"
+    href="/intelligence"
     className={navClass("/news")}
   onClick={() => {
     setIndustryOpen(false);
     setMenuOpen(false);
   }}
 >
-    News
+    Intelligence
 </Link>
 
 <Link
