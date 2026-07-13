@@ -30,8 +30,6 @@ export default function Navbar() {
   
 useEffect(() => {
   function handleClickOutside(event: MouseEvent) {
-    useEffect(() => {
-  function handleClickOutside(event: MouseEvent) {
     if (
       navRef.current &&
       !navRef.current.contains(event.target as Node)
@@ -44,7 +42,10 @@ useEffect(() => {
   document.addEventListener("mousedown", handleClickOutside);
 
   return () => {
-    document.removeEventListener("mousedown", handleClickOutside);
+    document.removeEventListener(
+      "mousedown",
+      handleClickOutside
+    );
   };
 }, []);
   }
@@ -58,7 +59,12 @@ useEffect(() => {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-slate-200">
 
-      <div className="max-w-7xl mx-auto px-6">
+  <div
+    ref={navRef}
+    className="max-w-7xl mx-auto px-6"
+  >
+
+    ...
 
         <div className="flex items-center justify-between h-20">
 
