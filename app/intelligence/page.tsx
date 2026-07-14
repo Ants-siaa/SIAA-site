@@ -2,6 +2,7 @@ import PageHero from "@/components/PageHero";
 import FeaturedStory from "@/components/FeaturedStory";
 import IntelligenceCategory from "@/components/IntelligenceCategory";
 import BriefingHeader from "@/components/BriefingHeader";
+import IntelligenceDashboard from "@/components/IntelligenceDashboard";
 
 export default function IntelligencePage() {
   return (
@@ -14,9 +15,7 @@ export default function IntelligencePage() {
         image="/images/homepage-hero.png"
       />
 
-      <BriefingHeader
-  storyCount={48}
-  sourceCount={12}
+      <IntelligenceDashboard
   updated="6:05 AM AEST"
 />
       
