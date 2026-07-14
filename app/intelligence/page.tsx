@@ -68,9 +68,7 @@ export default function IntelligencePage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
 
-          import FeaturedStory from "@/components/FeaturedStory";
-
-          <p className="mt-6 text-lg text-slate-600 max-w-3xl">
+           <p className="mt-6 text-lg text-slate-600 max-w-3xl">
             The SIAA Intelligence Centre will provide daily Australian and global
             semiconductor news, research, funding opportunities, policy updates,
             events and industry analysis. This content will be updated
