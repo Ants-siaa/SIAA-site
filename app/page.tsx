@@ -152,91 +152,86 @@ export default function Home() {
 
 <StrategicPriorities />
 
-      {/* ================= NEWS ================= */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
+{/* ================= NEWS ================= */}
+<section className="py-20">
+  <div className="max-w-7xl mx-auto px-6">
 
-<div className="flex justify-between items-center">
+    <div className="flex justify-between items-center">
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
+          Intelligence Centre
+        </p>
 
-  <div>
-    <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
-      Intelligence Centre
-    </p>
+        <h2 className="text-3xl font-bold mt-2">
+          Today's Semiconductor Intelligence
+        </h2>
+      </div>
 
-    <h2 className="text-3xl font-bold mt-2">
-      Today's Semiconductor Intelligence
-    </h2>
+      <Link
+        href="/intelligence"
+        className="text-blue-600 font-medium hover:underline"
+      >
+        View Today's Briefing →
+      </Link>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-8 mt-10">
+
+      <Link
+        href="/intelligence#australia"
+        className="rounded-xl border border-slate-200 p-6 hover:shadow-lg transition"
+      >
+        <p className="text-sm font-semibold text-blue-600">
+          🇦🇺 Australian Industry
+        </p>
+
+        <h3 className="mt-3 font-semibold">
+          Latest Australian semiconductor developments
+        </h3>
+
+        <p className="mt-3 text-sm text-slate-600">
+          Funding announcements, industry news and Australian company updates.
+        </p>
+      </Link>
+
+      <Link
+        href="/intelligence#global"
+        className="rounded-xl border border-slate-200 p-6 hover:shadow-lg transition"
+      >
+        <p className="text-sm font-semibold text-blue-600">
+          🌏 Global Industry
+        </p>
+
+        <h3 className="mt-3 font-semibold">
+          International semiconductor news
+        </h3>
+
+        <p className="mt-3 text-sm text-slate-600">
+          TSMC, Intel, Samsung, NVIDIA and worldwide industry developments.
+        </p>
+      </Link>
+
+      <Link
+        href="/intelligence#research"
+        className="rounded-xl border border-slate-200 p-6 hover:shadow-lg transition"
+      >
+        <p className="text-sm font-semibold text-blue-600">
+          🔬 Research & Innovation
+        </p>
+
+        <h3 className="mt-3 font-semibold">
+          Australian research breakthroughs
+        </h3>
+
+        <p className="mt-3 text-sm text-slate-600">
+          Universities, research organisations and emerging technologies.
+        </p>
+      </Link>
+
+    </div>
+
   </div>
-
-  <Link
-    href="/intelligence"
-    className="text-blue-600 font-medium hover:underline"
-  >
-    View Today's Briefing →
-  </Link>
-
-</div>
-
-  
-          <div className="grid md:grid-cols-3 gap-8 mt-10">
-
-   <Link
-    href="/intelligence#australia"
-    className="rounded-xl border border-slate-200 p-6 hover:shadow-lg transition"
-  >
-    <p className="text-sm font-semibold text-blue-600">
-      🇦🇺 Australian Industry
-    </p>
-
-    <h3 className="mt-3 font-semibold">
-      Latest Australian semiconductor developments
-    </h3>
-
-    <p className="mt-3 text-sm text-slate-600">
-      Funding announcements, industry news and Australian company updates.
-    </p>
-  </Link>
-
-  <Link
-    href="/intelligence#global"
-    className="rounded-xl border border-slate-200 p-6 hover:shadow-lg transition"
-  >
-    <p className="text-sm font-semibold text-blue-600">
-      🌏 Global Industry
-    </p>
-
-    <h3 className="mt-3 font-semibold">
-      International semiconductor news
-    </h3>
-
-    <p className="mt-3 text-sm text-slate-600">
-      TSMC, Intel, Samsung, NVIDIA and worldwide industry developments.
-    </p>
-  </Link>
-
-  <Link
-    href="/intelligence#research"
-    className="rounded-xl border border-slate-200 p-6 hover:shadow-lg transition"
-  >
-    <p className="text-sm font-semibold text-blue-600">
-      🔬 Research & Innovation
-    </p>
-
-    <h3 className="mt-3 font-semibold">
-      Australian research breakthroughs
-    </h3>
-
-    <p className="mt-3 text-sm text-slate-600">
-      Universities, research organisations and emerging technologies.
-    </p>
-  </Link>
-
-</div>
-
-          </div>
-
-        </div>
-      </section>
+</section>
 
       {/* ================= CTA ================= */}
       <section className="bg-blue-900 text-white py-16">
