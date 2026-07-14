@@ -1,5 +1,6 @@
 import PageHero from "@/components/PageHero";
 import FeaturedStory from "@/components/FeaturedStory";
+import IntelligenceCategory from "@/components/IntelligenceCategory";
 
 export default function IntelligencePage() {
   return (
@@ -19,6 +20,41 @@ export default function IntelligencePage() {
   href="#"
   category="Australian Industry"
   date="14 July 2026"
+/>
+      <IntelligenceCategory
+  id="australia"
+  icon="🇦🇺"
+  title="Australian Industry"
+  description="The latest semiconductor developments from Australian companies, universities, research organisations and government."
+
+  stories={[
+    {
+      title: "Queensland invests in semiconductor manufacturing",
+      summary:
+        "New investment strengthens sovereign capability and advanced manufacturing.",
+      href: "#",
+      category: "Funding",
+      date: "14 July 2026",
+    },
+
+    {
+      title: "University research drives photonics innovation",
+      summary:
+        "Australian researchers demonstrate new integrated photonic technologies.",
+      href: "#",
+      category: "Research",
+      date: "14 July 2026",
+    },
+
+    {
+      title: "Industry workforce programs expand",
+      summary:
+        "New initiatives aim to address semiconductor skills shortages across Australia.",
+      href: "#",
+      category: "Workforce",
+      date: "14 July 2026",
+    },
+  ]}
 />
 
       <section className="py-20">
