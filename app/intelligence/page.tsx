@@ -1,6 +1,7 @@
 import PageHero from "@/components/PageHero";
 import FeaturedStory from "@/components/FeaturedStory";
 import IntelligenceCategory from "@/components/IntelligenceCategory";
+import BriefingHeader from "@/components/BriefingHeader";
 
 export default function IntelligencePage() {
   return (
@@ -12,6 +13,13 @@ export default function IntelligencePage() {
         subtitle="Daily Australian and global semiconductor news, research, funding, policy and events curated for Australia's semiconductor ecosystem."
         image="/images/homepage-hero.png"
       />
+
+      <BriefingHeader
+  storyCount={48}
+  sourceCount={12}
+  updated="6:05 AM AEST"
+/>
+      
       <FeaturedStory
   title="Queensland Strengthens Australia's Semiconductor Capability"
   summary="Queensland continues to invest in advanced manufacturing, workforce development and sovereign semiconductor capability through collaboration across industry, universities and government."
