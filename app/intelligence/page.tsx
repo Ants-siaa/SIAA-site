@@ -3,6 +3,7 @@ import FeaturedStory from "@/components/FeaturedStory";
 import IntelligenceCategory from "@/components/IntelligenceCategory";
 import BriefingHeader from "@/components/BriefingHeader";
 import IntelligenceDashboard from "@/components/IntelligenceDashboard";
+import SourceRibbon from "@/components/SourceRibbon";
 
 export default function IntelligencePage() {
   return (
@@ -18,6 +19,7 @@ export default function IntelligencePage() {
       <IntelligenceDashboard
   updated="6:05 AM AEST"
 />
+      <SourceRibbon />
       
       <FeaturedStory
   title="Queensland Strengthens Australia's Semiconductor Capability"
