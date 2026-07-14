@@ -1,4 +1,5 @@
 import PageHero from "@/components/PageHero";
+import FeaturedStory from "@/components/FeaturedStory";
 
 export default function IntelligencePage() {
   return (
