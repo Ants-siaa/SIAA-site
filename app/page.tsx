@@ -177,17 +177,7 @@ export default function Home() {
 
 </div>
 
-  <Link
-    href="/intelligence"
-    className="text-blue-600 font-medium hover:underline"
-  >
-    View Today's Briefing →
-  </Link>
-
-</div>
-           
-          </div>
-
+  
           <div className="grid md:grid-cols-3 gap-8 mt-10">
 
    <Link
