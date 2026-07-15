@@ -28,14 +28,7 @@ export default function IntelligencePage() {
       
       <FeaturedStory {...featuredStory} />
 
-      <IntelligenceCategory
-  id="australia"
-  icon="🇦🇺"
-  title="Australian Industry"
-  description="The latest semiconductor developments from Australian companies, universities, research organisations and government."
-
-  stories={[
-    {categories.map((category) => (
+      {categories.map((category) => (
   <IntelligenceCategory
     key={category.id}
     id={category.id}
@@ -45,30 +38,6 @@ export default function IntelligencePage() {
     stories={category.stories}
   />
 ))}
-
-    {categories.map((category) => (
-  <IntelligenceCategory
-    key={category.id}
-    id={category.id}
-    icon={category.icon}
-    title={category.title}
-    description={category.description}
-    stories={category.stories}
-  />
-))}
-
-    {categories.map((category) => (
-  <IntelligenceCategory
-    key={category.id}
-    id={category.id}
-    icon={category.icon}
-    title={category.title}
-    description={category.description}
-    stories={category.stories}
-  />
-))}
-  ]}
-/>
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
