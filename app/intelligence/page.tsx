@@ -4,18 +4,19 @@ import { useState } from "react";
 import PageHero from "@/components/PageHero";
 import FeaturedStory from "@/components/FeaturedStory";
 import IntelligenceCategory from "@/components/IntelligenceCategory";
-import BriefingHeader from "@/components/BriefingHeader";
 import IntelligenceDashboard from "@/components/IntelligenceDashboard";
 import SourceRibbon from "@/components/SourceRibbon";
+import IntelligenceSearch from "@/components/IntelligenceSearch";
 import {
   dashboard,
   featuredStory,
   categories,
 } from "@/data/intelligence/today";
 
-const [search, setSearch] = useState("");
+xport default function IntelligencePage() {
 
-export default function IntelligencePage() {
+  const [search, setSearch] = useState("");
+  
   return (
     <main className="bg-white text-slate-900">
 
