@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import PageHero from "@/components/PageHero";
 import FeaturedStory from "@/components/FeaturedStory";
 import IntelligenceCategory from "@/components/IntelligenceCategory";
@@ -9,6 +12,8 @@ import {
   featuredStory,
   categories,
 } from "@/data/intelligence/today";
+
+const [search, setSearch] = useState("");
 
 export default function IntelligencePage() {
   return (
@@ -24,6 +29,11 @@ export default function IntelligencePage() {
       <IntelligenceDashboard
     updated={dashboard.updated}
 />
+      <IntelligenceSearch
+    value={search}
+    onChange={setSearch}
+/>
+      
       <SourceRibbon />
       
       <FeaturedStory {...featuredStory} />
