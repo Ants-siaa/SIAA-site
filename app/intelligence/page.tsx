@@ -4,6 +4,11 @@ import IntelligenceCategory from "@/components/IntelligenceCategory";
 import BriefingHeader from "@/components/BriefingHeader";
 import IntelligenceDashboard from "@/components/IntelligenceDashboard";
 import SourceRibbon from "@/components/SourceRibbon";
+import {
+  dashboard,
+  featuredStory,
+  categories,
+} from "@/data/intelligence/today";
 
 export default function IntelligencePage() {
   return (
@@ -17,19 +22,12 @@ export default function IntelligencePage() {
       />
 
       <IntelligenceDashboard
-  updated="6:05 AM AEST"
+    updated={dashboard.updated}
 />
       <SourceRibbon />
       
-      <FeaturedStory
-  title="Queensland Strengthens Australia's Semiconductor Capability"
-  summary="Queensland continues to invest in advanced manufacturing, workforce development and sovereign semiconductor capability through collaboration across industry, universities and government."
-  why="The growth of Australia's semiconductor ecosystem is essential for national resilience, advanced manufacturing and participation in global supply chains."
-  image="/images/homepage-hero.png"
-  href="#"
-  category="Australian Industry"
-  date="14 July 2026"
-/>
+      <FeaturedStory {...featuredStory} />
+
       <IntelligenceCategory
   id="australia"
   icon="🇦🇺"
@@ -37,32 +35,38 @@ export default function IntelligencePage() {
   description="The latest semiconductor developments from Australian companies, universities, research organisations and government."
 
   stories={[
-    {
-      title: "Queensland invests in semiconductor manufacturing",
-      summary:
-        "New investment strengthens sovereign capability and advanced manufacturing.",
-      href: "#",
-      category: "Funding",
-      date: "14 July 2026",
-    },
+    {categories.map((category) => (
+  <IntelligenceCategory
+    key={category.id}
+    id={category.id}
+    icon={category.icon}
+    title={category.title}
+    description={category.description}
+    stories={category.stories}
+  />
+))}
 
-    {
-      title: "University research drives photonics innovation",
-      summary:
-        "Australian researchers demonstrate new integrated photonic technologies.",
-      href: "#",
-      category: "Research",
-      date: "14 July 2026",
-    },
+    {categories.map((category) => (
+  <IntelligenceCategory
+    key={category.id}
+    id={category.id}
+    icon={category.icon}
+    title={category.title}
+    description={category.description}
+    stories={category.stories}
+  />
+))}
 
-    {
-      title: "Industry workforce programs expand",
-      summary:
-        "New initiatives aim to address semiconductor skills shortages across Australia.",
-      href: "#",
-      category: "Workforce",
-      date: "14 July 2026",
-    },
+    {categories.map((category) => (
+  <IntelligenceCategory
+    key={category.id}
+    id={category.id}
+    icon={category.icon}
+    title={category.title}
+    description={category.description}
+    stories={category.stories}
+  />
+))}
   ]}
 />
 
