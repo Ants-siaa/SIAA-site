@@ -13,7 +13,7 @@ import {
   categories,
 } from "@/data/intelligence/today";
 
-xport default function IntelligencePage() {
+export default function IntelligencePage() {
 
   const [search, setSearch] = useState("");
   
