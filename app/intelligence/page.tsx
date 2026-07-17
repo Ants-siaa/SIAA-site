@@ -46,15 +46,34 @@ export default function IntelligencePage() {
       <FeaturedStory {...featuredStory} />
 
    {categories.map((category) => {
-  const filteredStories = category.stories.filter((story) => {
-    const term = search.toLowerCase();
+  const term = search.trim().toLowerCase();
 
-    return (
-      story.title.toLowerCase().includes(term) ||
-      story.summary.toLowerCase().includes(term) ||
-      (story.category ?? "").toLowerCase().includes(term)
-    );
-  });
+  const filteredStories =
+    term === ""
+      ? category.stories
+      : category.stories.filter((story) => {
+          return (
+            story.title.toLowerCase().includes(term) ||
+            story.summary.toLowerCase().includes(term) ||
+            (story.category ?? "").toLowerCase().includes(term)
+          );
+        });
+
+  if (filteredStories.length === 0) {
+    return null;
+  }
+
+  return (
+    <IntelligenceCategory
+      key={category.id}
+      id={category.id}
+      icon={category.icon}
+      title={category.title}
+      description={category.description}
+      stories={filteredStories}
+    />
+  );
+})}
 
   if (filteredStories.length === 0) return null;
 
