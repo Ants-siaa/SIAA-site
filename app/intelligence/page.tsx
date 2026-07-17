@@ -75,20 +75,6 @@ export default function IntelligencePage() {
   );
 })}
 
-  if (filteredStories.length === 0) return null;
-
-  return (
-    <IntelligenceCategory
-      key={category.id}
-      id={category.id}
-      icon={category.icon}
-      title={category.title}
-      description={category.description}
-      stories={filteredStories}
-    />
-  );
-})}
-
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
 
