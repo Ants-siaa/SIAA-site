@@ -43,8 +43,42 @@ export default function IntelligencePage() {
       
       <SourceRibbon />
       
-      <FeaturedStory {...featuredStory} />
+      {search.trim() === "" && (
+  <FeaturedStory {...featuredStory} />
+)}
+{search.trim() !== "" && (
+  <section className="py-10 border-b border-slate-200 bg-blue-50">
+    <div className="max-w-7xl mx-auto px-6">
 
+      <div className="flex items-center justify-between flex-wrap gap-4">
+
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
+            Search Results
+          </p>
+
+          <h2 className="text-3xl font-bold mt-2">
+            Results for "{search}"
+          </h2>
+
+          <p className="mt-3 text-slate-600">
+            Showing semiconductor news matching your search.
+          </p>
+        </div>
+
+        <button
+          onClick={() => setSearch("")}
+          className="rounded-lg border border-slate-300 bg-white px-5 py-3 hover:bg-slate-50 transition"
+        >
+          Clear Search
+        </button>
+
+      </div>
+
+    </div>
+  </section>
+)}
+      
    {categories.map((category) => {
   const term = search.trim().toLowerCase();
 
