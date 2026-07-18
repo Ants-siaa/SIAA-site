@@ -186,6 +186,9 @@ export default function JoinPage() {
       </section>
 
       <MembershipForm />
+      <p className="text-center text-sm text-slate-500 mt-8">
+  Membership applications are reviewed promptly, and we'll contact you with the next steps once your application has been received.
+</p>
 
      {/* ================= THANK YOU ================= */}
 
