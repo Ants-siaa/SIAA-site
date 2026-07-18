@@ -34,13 +34,7 @@ export default function IntelligencePage() {
     value={search}
     onChange={setSearch}
 />
-      <p className="mt-4 text-red-600">
-  Search = "{search}"
-</p>
-      <p className="mt-3 text-sm text-slate-500">
-  Showing stories matching "{search || "All"}"
-</p>
-      
+            
       <SourceRibbon />
       
       {search.trim() === "" && (
