@@ -240,7 +240,7 @@ className={`transition-transform ${
 
             <Link
             href="/join"
-            className="rounded-lg bg-[#0066FF] px-5 py-1.5 font-medium text-white shadow hover:bg-blue-700 transition"
+            className="rounded-lg bg-[#0066FF] px-5 py-2.5 font-medium text-white shadow hover:bg-blue-700 transition"
 >
     Join SIAA
 </Link>
