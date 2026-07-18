@@ -187,7 +187,30 @@ export default function JoinPage() {
 
       <MembershipForm />
 
-      <CTASection />
+     {/* ================= THANK YOU ================= */}
+
+<section className="bg-blue-900 text-white py-20">
+
+  <div className="max-w-4xl mx-auto px-6 text-center">
+
+    <h2 className="text-4xl font-bold">
+      Together We're Building Australia's Semiconductor Future
+    </h2>
+
+    <p className="mt-8 text-xl text-blue-100 leading-relaxed">
+      Every new member strengthens Australia's semiconductor ecosystem.
+      Whether you're an individual professional, a start-up, a university,
+      an established company or a government organisation, your involvement
+      helps create a stronger, more connected and globally competitive industry.
+    </p>
+
+    <p className="mt-8 text-lg text-blue-200">
+      Thank you for supporting the Semiconductor Industry Association of Australia.
+    </p>
+
+  </div>
+
+</section>
 
     </main>
   );
