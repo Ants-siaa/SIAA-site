@@ -239,10 +239,10 @@ className={`transition-transform ${
 </a>
 
             <Link
-            href="/join"
-            className="rounded-lg bg-[#0066FF] px-8 py-0.5 font-medium text-white shadow hover:bg-blue-700 transition"
+  href="/join"
+  className="whitespace-nowrap rounded-lg bg-[#0066FF] px-8 py-2 font-medium text-white shadow hover:bg-blue-700 transition"
 >
-    Join SIAA
+  Join SIAA
 </Link>
 
           </nav>
