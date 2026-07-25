@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="bg-white text-slate-900">
 
-
+ {/* ================= HERO ================= */}
       {/* ================= HERO ================= */}
       <section className="relative">
         <div className="grid lg:grid-cols-2 min-h-[600px]">
